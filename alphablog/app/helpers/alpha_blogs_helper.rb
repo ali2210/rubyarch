@@ -1,0 +1,2 @@
+module AlphaBlogsHelper
+end

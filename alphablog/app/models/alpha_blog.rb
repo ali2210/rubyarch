@@ -1,0 +1,2 @@
+class AlphaBlog < ApplicationRecord
+end
