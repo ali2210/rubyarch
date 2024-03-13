@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   resources :alpha_blogs
-  resources :articles
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   root 'pages#home'
@@ -13,5 +12,7 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   get "about" , to: 'pages#about'
+
+  resources :alpha_blogs, only: [:show, :index, :new, :create, :edit, :update, :delete]
   
 end

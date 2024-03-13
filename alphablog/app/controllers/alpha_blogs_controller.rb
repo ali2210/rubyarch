@@ -8,6 +8,7 @@ class AlphaBlogsController < ApplicationController
 
   # GET /alpha_blogs/1 or /alpha_blogs/1.json
   def show
+    
   end
 
   # GET /alpha_blogs/new
@@ -17,6 +18,7 @@ class AlphaBlogsController < ApplicationController
 
   # GET /alpha_blogs/1/edit
   def edit
+    
   end
 
   # POST /alpha_blogs or /alpha_blogs.json

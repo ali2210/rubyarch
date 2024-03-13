@@ -186,3 +186,636 @@ Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.0ms | Allocations: 1856)
   [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mAlphaBlog Load (0.1ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
   [1m[36mAlphaBlog Load (0.1ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Started GET "/" for ::1 at 2024-03-13 19:18:46 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.7ms | Allocations: 193)
+  Rendered layout layouts/application.html.erb (Duration: 428.6ms | Allocations: 34052)
+Completed 200 OK in 515ms (Views: 466.2ms | ActiveRecord: 0.0ms | Allocations: 40884)
+
+
+Started GET "/about" for ::1 at 2024-03-13 19:18:57 +0500
+Processing by PagesController#about as HTML
+  Rendering html template
+  Rendered html template (Duration: 0.1ms | Allocations: 9)
+Completed 200 OK in 34ms (Views: 32.7ms | ActiveRecord: 0.0ms | Allocations: 565)
+
+
+Started GET "/home" for ::1 at 2024-03-13 19:19:06 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/home"):
+  
+Started GET "/" for ::1 at 2024-03-13 19:27:03 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.6ms | Allocations: 193)
+  Rendered layout layouts/application.html.erb (Duration: 415.1ms | Allocations: 35937)
+Completed 200 OK in 432ms (Views: 420.6ms | ActiveRecord: 0.0ms | Allocations: 42783)
+
+
+Started GET "/alpha_blogs" for ::1 at 2024-03-13 19:27:12 +0500
+Processing by AlphaBlogsController#index as HTML
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.0ms | Allocations: 1010)
+
+
+  
+SyntaxError (/home/ali/Documents/run_prj/rubyarch/alphablog/app/models/alpha_blog.rb:3: syntax error, unexpected ':', expecting =>
+...ence: true , length: {maximum : 20, maximum: 300}
+...                              ^
+):
+  
+app/models/alpha_blog.rb:3: syntax error, unexpected ':', expecting =>
+app/controllers/alpha_blogs_controller.rb:6:in `index'
+Started GET "/alpha_blogs" for ::1 at 2024-03-13 19:27:56 +0500
+Processing by AlphaBlogsController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 937)
+
+
+  
+SyntaxError (/home/ali/Documents/run_prj/rubyarch/alphablog/app/models/alpha_blog.rb:3: syntax error, unexpected ':', expecting =>
+...sence: true, length: {maximum : 20, maximum: 300}
+...                              ^
+):
+  
+app/models/alpha_blog.rb:3: syntax error, unexpected ':', expecting =>
+app/controllers/alpha_blogs_controller.rb:6:in `index'
+Started GET "/alpha_blogs" for ::1 at 2024-03-13 19:28:40 +0500
+Processing by AlphaBlogsController#index as HTML
+Completed 500 Internal Server Error in 146ms (ActiveRecord: 0.0ms | Allocations: 9603)
+
+
+  
+ArgumentError (Unknown key: :presence. Valid keys are: :on, :if, :unless, :prepend. Perhaps you meant to call `validates` instead of `validate`?):
+  
+app/models/alpha_blog.rb:2:in `<class:AlphaBlog>'
+app/models/alpha_blog.rb:1:in `<main>'
+app/controllers/alpha_blogs_controller.rb:6:in `index'
+Started GET "/alpha_blogs" for ::1 at 2024-03-13 19:29:17 +0500
+Processing by AlphaBlogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/index.html.erb within layouts/application
+  [1m[36mAlphaBlog Load (0.2ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs"[0m
+  ↳ app/views/alpha_blogs/index.html.erb:6
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 7.8ms | Allocations: 280)
+  Rendered alpha_blogs/index.html.erb within layouts/application (Duration: 151.1ms | Allocations: 76901)
+  Rendered layout layouts/application.html.erb (Duration: 195.7ms | Allocations: 92446)
+Completed 200 OK in 525ms (Views: 196.3ms | ActiveRecord: 2.8ms | Allocations: 97049)
+
+
+Started GET "/alpha_blogs/2" for ::1 at 2024-03-13 19:29:19 +0500
+Processing by AlphaBlogsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAlphaBlog Load (0.2ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:65:in `set_alpha_blog'
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 0.2ms | Allocations: 5913)
+
+
+  
+NameError (undefined local variable or method `debug' for #<AlphaBlogsController:0x00000000017110>
+Did you mean?  debugger):
+  
+app/controllers/alpha_blogs_controller.rb:11:in `show'
+Started GET "/alpha_blogs/2" for ::1 at 2024-03-13 19:29:20 +0500
+Processing by AlphaBlogsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAlphaBlog Load (0.2ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:65:in `set_alpha_blog'
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.1ms | Allocations: 3662)
+
+
+  
+NameError (undefined local variable or method `debug' for #<AlphaBlogsController:0x00000000017430>
+Did you mean?  debugger):
+  
+app/controllers/alpha_blogs_controller.rb:11:in `show'
+Started GET "/alpha_blogs/2" for ::1 at 2024-03-13 19:30:07 +0500
+Processing by AlphaBlogsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAlphaBlog Load (0.2ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:64:in `set_alpha_blog'
+  [1m[36mCACHE AlphaBlog Load (0.0ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/show.html.erb within layouts/application
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.8ms | Allocations: 216)
+  Rendered alpha_blogs/show.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1253)
+  Rendered layout layouts/application.html.erb (Duration: 36.1ms | Allocations: 16729)
+Completed 200 OK in 65ms (Views: 39.5ms | ActiveRecord: 4.0ms | Allocations: 23930)
+
+
+Started GET "/alpha_blogs/2/edit" for ::1 at 2024-03-13 19:30:08 +0500
+Processing by AlphaBlogsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAlphaBlog Load (0.2ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:64:in `set_alpha_blog'
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/edit.html.erb within layouts/application
+  Rendered alpha_blogs/_form.html.erb (Duration: 36.2ms | Allocations: 3115)
+  Rendered alpha_blogs/edit.html.erb within layouts/application (Duration: 38.5ms | Allocations: 3480)
+  Rendered layout layouts/application.html.erb (Duration: 41.5ms | Allocations: 4752)
+Completed 200 OK in 69ms (Views: 42.6ms | ActiveRecord: 0.2ms | Allocations: 5758)
+
+
+Started GET "/alpha_blogs/2/edit" for ::1 at 2024-03-13 19:30:09 +0500
+Processing by AlphaBlogsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAlphaBlog Load (0.1ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:64:in `set_alpha_blog'
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/edit.html.erb within layouts/application
+  Rendered alpha_blogs/_form.html.erb (Duration: 2.5ms | Allocations: 880)
+  Rendered alpha_blogs/edit.html.erb within layouts/application (Duration: 3.2ms | Allocations: 988)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 2141)
+Completed 200 OK in 10ms (Views: 7.7ms | ActiveRecord: 0.1ms | Allocations: 3090)
+
+
+Started GET "/alpha_blogs" for ::1 at 2024-03-13 19:30:11 +0500
+Processing by AlphaBlogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/index.html.erb within layouts/application
+  [1m[36mAlphaBlog Load (0.2ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs"[0m
+  ↳ app/views/alpha_blogs/index.html.erb:6
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered alpha_blogs/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1309)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 2478)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.2ms | Allocations: 2916)
+
+
+Started GET "/alpha_blogs/2" for ::1 at 2024-03-13 19:30:12 +0500
+Processing by AlphaBlogsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAlphaBlog Load (0.1ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:64:in `set_alpha_blog'
+  [1m[36mCACHE AlphaBlog Load (0.0ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/show.html.erb within layouts/application
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered alpha_blogs/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 495)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 1647)
+Completed 200 OK in 9ms (Views: 5.4ms | ActiveRecord: 0.1ms | Allocations: 2944)
+
+
+Started GET "/alpha_blogs/2/edit" for ::1 at 2024-03-13 19:30:14 +0500
+Processing by AlphaBlogsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAlphaBlog Load (0.1ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:64:in `set_alpha_blog'
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/edit.html.erb within layouts/application
+  Rendered alpha_blogs/_form.html.erb (Duration: 2.7ms | Allocations: 839)
+  Rendered alpha_blogs/edit.html.erb within layouts/application (Duration: 3.4ms | Allocations: 943)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 2095)
+Completed 200 OK in 11ms (Views: 7.5ms | ActiveRecord: 0.1ms | Allocations: 2935)
+
+
+Started GET "/alpha_blogs" for ::1 at 2024-03-13 19:30:14 +0500
+Processing by AlphaBlogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/index.html.erb within layouts/application
+  [1m[36mAlphaBlog Load (0.1ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs"[0m
+  ↳ app/views/alpha_blogs/index.html.erb:6
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered alpha_blogs/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 938)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 2107)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.1ms | Allocations: 2438)
+
+
+Started GET "/alpha_blogs/2/edit" for ::1 at 2024-03-13 19:30:14 +0500
+Processing by AlphaBlogsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAlphaBlog Load (0.1ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:64:in `set_alpha_blog'
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/edit.html.erb within layouts/application
+  Rendered alpha_blogs/_form.html.erb (Duration: 2.9ms | Allocations: 847)
+  Rendered alpha_blogs/edit.html.erb within layouts/application (Duration: 3.6ms | Allocations: 951)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 2103)
+Completed 200 OK in 11ms (Views: 8.0ms | ActiveRecord: 0.1ms | Allocations: 2943)
+
+
+Started GET "/alpha_blogs" for ::1 at 2024-03-13 19:30:19 +0500
+Processing by AlphaBlogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/index.html.erb within layouts/application
+  [1m[36mAlphaBlog Load (0.2ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs"[0m
+  ↳ app/views/alpha_blogs/index.html.erb:6
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered alpha_blogs/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 935)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 2104)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.2ms | Allocations: 2435)
+
+
+Started GET "/alpha_blogs/new" for ::1 at 2024-03-13 19:40:57 +0500
+Processing by AlphaBlogsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/new.html.erb within layouts/application
+  Rendered alpha_blogs/_form.html.erb (Duration: 3.7ms | Allocations: 1494)
+  Rendered alpha_blogs/new.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1828)
+  Rendered layout layouts/application.html.erb (Duration: 121.2ms | Allocations: 17223)
+Completed 200 OK in 149ms (Views: 124.3ms | ActiveRecord: 0.0ms | Allocations: 21867)
+
+
+Started GET "/alpha_blogs/2" for ::1 at 2024-03-13 19:40:58 +0500
+Processing by AlphaBlogsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAlphaBlog Load (1.6ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:64:in `set_alpha_blog'
+  [1m[36mCACHE AlphaBlog Load (0.0ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/show.html.erb within layouts/application
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.8ms | Allocations: 205)
+  Rendered alpha_blogs/show.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1028)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 2180)
+Completed 200 OK in 14ms (Views: 6.7ms | ActiveRecord: 2.5ms | Allocations: 4669)
+
+
+Started GET "/alpha_blogs/new" for ::1 at 2024-03-13 19:40:59 +0500
+Processing by AlphaBlogsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/new.html.erb within layouts/application
+  Rendered alpha_blogs/_form.html.erb (Duration: 2.1ms | Allocations: 807)
+  Rendered alpha_blogs/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 884)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 2040)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.0ms | Allocations: 2377)
+
+
+Started GET "/alpha_blogs" for ::1 at 2024-03-13 19:40:59 +0500
+Processing by AlphaBlogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/index.html.erb within layouts/application
+  [1m[36mAlphaBlog Load (0.2ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs"[0m
+  ↳ app/views/alpha_blogs/index.html.erb:6
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered alpha_blogs/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1216)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 2385)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.2ms | Allocations: 2799)
+
+
+Started POST "/alpha_blogs" for ::1 at 2024-03-13 19:42:42 +0500
+Processing by AlphaBlogsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "alpha_blog"=>{"title"=>"Tesla car", "description"=>"Elon musk company tesla working model y which will soon available for you. kindly book your car model. Product deliver after 2years , this option only for us"}, "commit"=>"Create Alpha blog"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/alpha_blogs_controller.rb:28:in `block in create'
+  [1m[36mAlphaBlog Create (2.0ms)[0m  [1m[32mINSERT INTO "alpha_blogs" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["title", "Tesla car"], ["description", "Elon musk company tesla working model y which will soon available for you. kindly book your car model. Product deliver after 2years , this option only for us"], ["created_at", "2024-03-13 14:42:42.291901"], ["updated_at", "2024-03-13 14:42:42.291901"]]
+  ↳ app/controllers/alpha_blogs_controller.rb:28:in `block in create'
+  [1m[36mTRANSACTION (75.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/alpha_blogs_controller.rb:28:in `block in create'
+Redirected to http://localhost:3000/alpha_blogs/3
+Completed 302 Found in 111ms (ActiveRecord: 77.0ms | Allocations: 4136)
+
+
+Started GET "/alpha_blogs/3" for ::1 at 2024-03-13 19:42:42 +0500
+Processing by AlphaBlogsController#show as TURBO_STREAM
+  Parameters: {"id"=>"3"}
+  [1m[36mAlphaBlog Load (0.2ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:64:in `set_alpha_blog'
+  [1m[36mCACHE AlphaBlog Load (0.0ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/show.html.erb within layouts/application
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered alpha_blogs/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 623)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 1881)
+Completed 200 OK in 13ms (Views: 8.2ms | ActiveRecord: 0.2ms | Allocations: 3290)
+
+
+Started GET "/alpha_blogs/3/edit" for ::1 at 2024-03-13 19:42:47 +0500
+Processing by AlphaBlogsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAlphaBlog Load (0.1ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:64:in `set_alpha_blog'
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/edit.html.erb within layouts/application
+  Rendered alpha_blogs/_form.html.erb (Duration: 2.4ms | Allocations: 918)
+  Rendered alpha_blogs/edit.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1230)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 2390)
+Completed 200 OK in 26ms (Views: 23.3ms | ActiveRecord: 0.1ms | Allocations: 3309)
+
+
+Started PATCH "/alpha_blogs/3" for ::1 at 2024-03-13 19:43:01 +0500
+Processing by AlphaBlogsController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "alpha_blog"=>{"title"=>"Tesla car", "description"=>"Elon musk company tesla working model y which will soon available for you. kindly book your car model. Product deliver after 2years , this option only for US-residents"}, "commit"=>"Update Alpha blog", "id"=>"3"}
+  [1m[36mAlphaBlog Load (0.1ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:64:in `set_alpha_blog'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/alpha_blogs_controller.rb:41:in `block in update'
+  [1m[36mAlphaBlog Update (1.7ms)[0m  [1m[33mUPDATE "alpha_blogs" SET "description" = ?, "updated_at" = ? WHERE "alpha_blogs"."id" = ?[0m  [["description", "Elon musk company tesla working model y which will soon available for you. kindly book your car model. Product deliver after 2years , this option only for US-residents"], ["updated_at", "2024-03-13 14:43:01.465277"], ["id", 3]]
+  ↳ app/controllers/alpha_blogs_controller.rb:41:in `block in update'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/alpha_blogs_controller.rb:41:in `block in update'
+Redirected to http://localhost:3000/alpha_blogs/3
+Completed 302 Found in 11ms (ActiveRecord: 2.1ms | Allocations: 3286)
+
+
+Started GET "/alpha_blogs/3" for ::1 at 2024-03-13 19:43:01 +0500
+Processing by AlphaBlogsController#show as TURBO_STREAM
+  Parameters: {"id"=>"3"}
+  [1m[36mAlphaBlog Load (0.1ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:64:in `set_alpha_blog'
+  [1m[36mCACHE AlphaBlog Load (0.0ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/show.html.erb within layouts/application
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered alpha_blogs/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 506)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 1658)
+Completed 200 OK in 10ms (Views: 6.7ms | ActiveRecord: 0.1ms | Allocations: 2956)
+
+
+Started GET "/alpha_blogs/3/edit" for ::1 at 2024-03-13 19:50:47 +0500
+Processing by AlphaBlogsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAlphaBlog Load (1.5ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:65:in `set_alpha_blog'
+  [1m[36mCACHE AlphaBlog Load (0.0ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:21:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/edit.html.erb within layouts/application
+  Rendered alpha_blogs/_form.html.erb (Duration: 5.3ms | Allocations: 1509)
+  Rendered alpha_blogs/edit.html.erb within layouts/application (Duration: 7.0ms | Allocations: 1896)
+  Rendered layout layouts/application.html.erb (Duration: 41.9ms | Allocations: 17372)
+Completed 200 OK in 59ms (Views: 44.6ms | ActiveRecord: 2.4ms | Allocations: 24066)
+
+
+Started GET "/alpha_blogs" for ::1 at 2024-03-13 19:51:05 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AlphaBlogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/index.html.erb within layouts/application
+  [1m[36mAlphaBlog Load (0.1ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs"[0m
+  ↳ app/views/alpha_blogs/index.html.erb:6
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.8ms | Allocations: 292)
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered alpha_blogs/index.html.erb within layouts/application (Duration: 241.5ms | Allocations: 79451)
+  Rendered layout layouts/application.html.erb (Duration: 321.2ms | Allocations: 112501)
+Completed 200 OK in 372ms (Views: 324.7ms | ActiveRecord: 2.9ms | Allocations: 130927)
+
+
+Started GET "/alpha_blogs/2" for ::1 at 2024-03-13 19:51:10 +0500
+Processing by AlphaBlogsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAlphaBlog Load (0.2ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:65:in `set_alpha_blog'
+  [1m[36mCACHE AlphaBlog Load (0.0ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/show.html.erb within layouts/application
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 28)
+  Rendered alpha_blogs/show.html.erb within layouts/application (Duration: 2.6ms | Allocations: 932)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 2193)
+Completed 200 OK in 13ms (Views: 6.2ms | ActiveRecord: 0.2ms | Allocations: 5959)
+
+
+Started GET "/alpha_blogs/3" for ::1 at 2024-03-13 19:51:14 +0500
+Processing by AlphaBlogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAlphaBlog Load (0.1ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:65:in `set_alpha_blog'
+  [1m[36mCACHE AlphaBlog Load (0.0ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/show.html.erb within layouts/application
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered alpha_blogs/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 496)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 1648)
+Completed 200 OK in 9ms (Views: 5.1ms | ActiveRecord: 0.1ms | Allocations: 2968)
+
+
+Started GET "/alpha_blogs/2" for ::1 at 2024-03-13 19:51:17 +0500
+Processing by AlphaBlogsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAlphaBlog Load (0.1ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:65:in `set_alpha_blog'
+  [1m[36mCACHE AlphaBlog Load (0.0ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/show.html.erb within layouts/application
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered alpha_blogs/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 490)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 1642)
+Completed 200 OK in 10ms (Views: 5.9ms | ActiveRecord: 0.1ms | Allocations: 2955)
+
+
+Started GET "/alpha_blogs/2/edit" for ::1 at 2024-03-13 19:51:19 +0500
+Processing by AlphaBlogsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAlphaBlog Load (0.1ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:65:in `set_alpha_blog'
+  [1m[36mCACHE AlphaBlog Load (0.0ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:21:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/edit.html.erb within layouts/application
+  Rendered alpha_blogs/_form.html.erb (Duration: 6.1ms | Allocations: 2816)
+  Rendered alpha_blogs/edit.html.erb within layouts/application (Duration: 7.6ms | Allocations: 3189)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 4461)
+Completed 200 OK in 15ms (Views: 11.2ms | ActiveRecord: 0.1ms | Allocations: 5858)
+
+
+Started GET "/alpha_blogs" for ::1 at 2024-03-13 19:51:38 +0500
+Processing by AlphaBlogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/index.html.erb within layouts/application
+  [1m[36mAlphaBlog Load (0.1ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs"[0m
+  ↳ app/views/alpha_blogs/index.html.erb:6
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered alpha_blogs/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1157)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 2330)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.1ms | Allocations: 2700)
+
+
+Started GET "/" for ::1 at 2024-03-13 19:52:31 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.1ms | Allocations: 193)
+  Rendered layout layouts/application.html.erb (Duration: 200.9ms | Allocations: 35927)
+Completed 200 OK in 221ms (Views: 207.6ms | ActiveRecord: 0.0ms | Allocations: 42773)
+
+
+Started GET "/alpha_blogs" for ::1 at 2024-03-13 19:52:35 +0500
+Processing by AlphaBlogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/index.html.erb within layouts/application
+  [1m[36mAlphaBlog Load (0.1ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs"[0m
+  ↳ app/views/alpha_blogs/index.html.erb:6
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 1.4ms | Allocations: 282)
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered alpha_blogs/index.html.erb within layouts/application (Duration: 55.6ms | Allocations: 76992)
+  Rendered layout layouts/application.html.erb (Duration: 58.3ms | Allocations: 78302)
+Completed 200 OK in 80ms (Views: 56.2ms | ActiveRecord: 3.2ms | Allocations: 90531)
+
+
+Started GET "/alpha_blogs/2" for ::1 at 2024-03-13 19:52:40 +0500
+Processing by AlphaBlogsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAlphaBlog Load (0.3ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:65:in `set_alpha_blog'
+  [1m[36mCACHE AlphaBlog Load (0.0ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/show.html.erb within layouts/application
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 28)
+  Rendered alpha_blogs/show.html.erb within layouts/application (Duration: 2.7ms | Allocations: 898)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 2159)
+Completed 200 OK in 13ms (Views: 6.4ms | ActiveRecord: 0.3ms | Allocations: 5916)
+
+
+Started GET "/alpha_blogs/3" for ::1 at 2024-03-13 19:52:41 +0500
+Processing by AlphaBlogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAlphaBlog Load (0.1ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:65:in `set_alpha_blog'
+  [1m[36mCACHE AlphaBlog Load (0.0ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/show.html.erb within layouts/application
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered alpha_blogs/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 499)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 1651)
+Completed 200 OK in 9ms (Views: 5.0ms | ActiveRecord: 0.1ms | Allocations: 2971)
+
+
+Started GET "/alpha_blogs/2" for ::1 at 2024-03-13 19:52:41 +0500
+Processing by AlphaBlogsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAlphaBlog Load (0.1ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:65:in `set_alpha_blog'
+  [1m[36mCACHE AlphaBlog Load (0.0ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/show.html.erb within layouts/application
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered alpha_blogs/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 490)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 1642)
+Completed 200 OK in 9ms (Views: 5.4ms | ActiveRecord: 0.1ms | Allocations: 2955)
+
+
+Started GET "/alpha_blogs/2/edit" for ::1 at 2024-03-13 19:52:43 +0500
+Processing by AlphaBlogsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAlphaBlog Load (0.2ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:65:in `set_alpha_blog'
+  [1m[36mCACHE AlphaBlog Load (0.0ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:21:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/edit.html.erb within layouts/application
+  Rendered alpha_blogs/_form.html.erb (Duration: 8.4ms | Allocations: 2807)
+  Rendered alpha_blogs/edit.html.erb within layouts/application (Duration: 10.0ms | Allocations: 3178)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 4450)
+Completed 200 OK in 18ms (Views: 13.1ms | ActiveRecord: 0.2ms | Allocations: 5834)
+
+
+Started PATCH "/alpha_blogs/2" for ::1 at 2024-03-13 19:58:48 +0500
+Processing by AlphaBlogsController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "alpha_blog"=>{"title"=>"ferrari car", "description"=>"Ferrai is an luxurious car, build in Italy. This car have prenium gasloine created by Gioachino Colombo directed by Enzo Ferrari’s called v12 ferrai engine"}, "commit"=>"Update Alpha blog", "id"=>"2"}
+  [1m[36mAlphaBlog Load (1.3ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:65:in `set_alpha_blog'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/alpha_blogs_controller.rb:42:in `block in update'
+  [1m[36mAlphaBlog Update (2.2ms)[0m  [1m[33mUPDATE "alpha_blogs" SET "title" = ?, "description" = ?, "updated_at" = ? WHERE "alpha_blogs"."id" = ?[0m  [["title", "ferrari car"], ["description", "Ferrai is an luxurious car, build in Italy. This car have prenium gasloine created by Gioachino Colombo directed by Enzo Ferrari’s called v12 ferrai engine"], ["updated_at", "2024-03-13 14:58:48.852130"], ["id", 2]]
+  ↳ app/controllers/alpha_blogs_controller.rb:42:in `block in update'
+  [1m[36mTRANSACTION (40.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/alpha_blogs_controller.rb:42:in `block in update'
+Redirected to http://localhost:3000/alpha_blogs/2
+Completed 302 Found in 53ms (ActiveRecord: 44.7ms | Allocations: 5147)
+
+
+Started GET "/alpha_blogs/2" for ::1 at 2024-03-13 19:58:48 +0500
+Processing by AlphaBlogsController#show as TURBO_STREAM
+  Parameters: {"id"=>"2"}
+  [1m[36mAlphaBlog Load (0.1ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:65:in `set_alpha_blog'
+  [1m[36mCACHE AlphaBlog Load (0.0ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/show.html.erb within layouts/application
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered alpha_blogs/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 608)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 1866)
+Completed 200 OK in 9ms (Views: 5.7ms | ActiveRecord: 0.1ms | Allocations: 3256)
+
+
+Started GET "/alpha_blogs/" for ::1 at 2024-03-13 20:06:45 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AlphaBlogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/index.html.erb within layouts/application
+  [1m[36mAlphaBlog Load (0.2ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs"[0m
+  ↳ app/views/alpha_blogs/index.html.erb:6
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.8ms | Allocations: 292)
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered alpha_blogs/index.html.erb within layouts/application (Duration: 196.4ms | Allocations: 79437)
+  Rendered layout layouts/application.html.erb (Duration: 312.2ms | Allocations: 112538)
+Completed 200 OK in 356ms (Views: 315.7ms | ActiveRecord: 4.2ms | Allocations: 130964)
+
+
+Started GET "/alpha_blogs/2" for ::1 at 2024-03-13 20:06:49 +0500
+Processing by AlphaBlogsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAlphaBlog Load (0.3ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:65:in `set_alpha_blog'
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/show.html.erb within layouts/application
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 28)
+  Rendered alpha_blogs/show.html.erb within layouts/application (Duration: 2.7ms | Allocations: 911)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 2175)
+Completed 200 OK in 12ms (Views: 6.9ms | ActiveRecord: 0.2ms | Allocations: 5468)
+
+
+Started GET "/alpha_blogs/3" for ::1 at 2024-03-13 20:06:52 +0500
+Processing by AlphaBlogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAlphaBlog Load (0.1ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:65:in `set_alpha_blog'
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/show.html.erb within layouts/application
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered alpha_blogs/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 478)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 1630)
+Completed 200 OK in 8ms (Views: 5.2ms | ActiveRecord: 0.1ms | Allocations: 2498)
+
+
+Started GET "/alpha_blogs/3/edit" for ::1 at 2024-03-13 20:06:54 +0500
+Processing by AlphaBlogsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAlphaBlog Load (0.1ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:65:in `set_alpha_blog'
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/edit.html.erb within layouts/application
+  Rendered alpha_blogs/_form.html.erb (Duration: 6.5ms | Allocations: 2804)
+  Rendered alpha_blogs/edit.html.erb within layouts/application (Duration: 8.1ms | Allocations: 3177)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 4449)
+Completed 200 OK in 15ms (Views: 11.7ms | ActiveRecord: 0.1ms | Allocations: 5390)
+
+
+Started GET "/alpha_blogs/new" for ::1 at 2024-03-13 20:06:57 +0500
+Processing by AlphaBlogsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/new.html.erb within layouts/application
+  Rendered alpha_blogs/_form.html.erb (Duration: 2.1ms | Allocations: 864)
+  Rendered alpha_blogs/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1134)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 2294)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms | Allocations: 2788)
+
+
+Started GET "/alpha_blogs/2" for ::1 at 2024-03-13 20:06:58 +0500
+Processing by AlphaBlogsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAlphaBlog Load (0.1ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:65:in `set_alpha_blog'
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/show.html.erb within layouts/application
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered alpha_blogs/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 495)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 1647)
+Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 0.1ms | Allocations: 2548)
+
+
