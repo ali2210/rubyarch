@@ -1,8 +1,8 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Alpha blogs</h1>
+<h1 style="color: red; position : relative ; left : 2pc"> Alpha blogs</h1>
 
-<div id="alpha_blogs">
+<div id="alpha_blogs" style="position: relative; left : 5pc; width : 30pc;">
   <% @alpha_blogs.each do |alpha_blog| %>
     <%= render alpha_blog %>
     <p>
@@ -11,4 +11,8 @@
   <% end %>
 </div>
 
-<%= link_to "New alpha blog", new_alpha_blog_path %>
+<div style="position : relative ; left : 7pc; color : red">
+    <p>
+        <%= link_to "New alpha blog", new_alpha_blog_path %>
+    </p>
+</div>

@@ -819,3 +819,1074 @@ Processing by AlphaBlogsController#show as HTML
 Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 0.1ms | Allocations: 2548)
 
 
+Started GET "/" for ::1 at 2024-03-14 16:52:07 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.7ms | Allocations: 193)
+  Rendered layout layouts/application.html.erb (Duration: 93.0ms | Allocations: 5982)
+Completed 500 Internal Server Error in 180ms (ActiveRecord: 0.0ms | Allocations: 12774)
+
+
+  
+ActionView::Template::Error (couldn't find file 'bootstrap' with type 'text/css'
+Checked in these paths: 
+  /home/ali/Documents/run_prj/rubyarch/alphablog/app/assets/config
+  /home/ali/Documents/run_prj/rubyarch/alphablog/app/assets/images
+  /home/ali/Documents/run_prj/rubyarch/alphablog/app/assets/stylesheets
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/stimulus-rails-1.3.3/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/turbo-rails-2.0.5/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/actiontext-7.1.3.2/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/actiontext-7.1.3.2/app/assets/stylesheets
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/actioncable-7.1.3.2/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/activestorage-7.1.3.2/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/actionview-7.1.3.2/app/assets/javascripts
+  /home/ali/Documents/run_prj/rubyarch/alphablog/app/javascript
+  /home/ali/Documents/run_prj/rubyarch/alphablog/vendor/javascript):
+     6:     <%= csrf_meta_tags %>
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     <%= javascript_importmap_tags %>
+    11:   </head>
+    12: 
+  
+app/views/layouts/application.html.erb:9
+Started GET "/" for ::1 at 2024-03-14 16:52:34 +0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 6)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 3292)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 3610)
+
+
+  
+ActionView::Template::Error (couldn't find file 'bootstrap' with type 'text/css'
+Checked in these paths: 
+  /home/ali/Documents/run_prj/rubyarch/alphablog/app/assets/config
+  /home/ali/Documents/run_prj/rubyarch/alphablog/app/assets/images
+  /home/ali/Documents/run_prj/rubyarch/alphablog/app/assets/stylesheets
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/stimulus-rails-1.3.3/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/turbo-rails-2.0.5/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/actiontext-7.1.3.2/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/actiontext-7.1.3.2/app/assets/stylesheets
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/actioncable-7.1.3.2/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/activestorage-7.1.3.2/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/actionview-7.1.3.2/app/assets/javascripts
+  /home/ali/Documents/run_prj/rubyarch/alphablog/app/javascript
+  /home/ali/Documents/run_prj/rubyarch/alphablog/vendor/javascript):
+     6:     <%= csrf_meta_tags %>
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     <%= javascript_importmap_tags %>
+    11:   </head>
+    12: 
+  
+app/views/layouts/application.html.erb:9
+Started GET "/uos-detection.insert.js" for ::1 at 2024-03-14 16:52:36 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/uos-detection.insert.js"):
+  
+Started GET "/alpha_blogs" for ::1 at 2024-03-14 17:05:31 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AlphaBlogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/index.html.erb within layouts/application
+  [1m[36mAlphaBlog Load (0.2ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs"[0m
+  ↳ app/views/alpha_blogs/index.html.erb:6
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 1.0ms | Allocations: 292)
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered alpha_blogs/index.html.erb within layouts/application (Duration: 250.7ms | Allocations: 77091)
+  Rendered layout layouts/application.html.erb (Duration: 258.9ms | Allocations: 81740)
+Completed 500 Internal Server Error in 371ms (ActiveRecord: 3.6ms | Allocations: 100128)
+
+
+  
+ActionView::Template::Error (couldn't find file 'bootstrap' with type 'text/css'
+Checked in these paths: 
+  /home/ali/Documents/run_prj/rubyarch/alphablog/app/assets/config
+  /home/ali/Documents/run_prj/rubyarch/alphablog/app/assets/images
+  /home/ali/Documents/run_prj/rubyarch/alphablog/app/assets/stylesheets
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/stimulus-rails-1.3.3/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/turbo-rails-2.0.5/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/actiontext-7.1.3.2/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/actiontext-7.1.3.2/app/assets/stylesheets
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/actioncable-7.1.3.2/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/activestorage-7.1.3.2/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/actionview-7.1.3.2/app/assets/javascripts
+  /home/ali/Documents/run_prj/rubyarch/alphablog/app/javascript
+  /home/ali/Documents/run_prj/rubyarch/alphablog/vendor/javascript):
+     6:     <%= csrf_meta_tags %>
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     <%= javascript_importmap_tags %>
+    11:   </head>
+    12: 
+  
+app/views/layouts/application.html.erb:9
+Started GET "/" for ::1 at 2024-03-14 17:16:09 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.7ms | Allocations: 193)
+  Rendered layout layouts/application.html.erb (Duration: 32.7ms | Allocations: 5105)
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 0.0ms | Allocations: 11897)
+
+
+  
+ActionView::Template::Error (couldn't find file 'bootstrap' with type 'text/css'
+Checked in these paths: 
+  /home/ali/Documents/run_prj/rubyarch/alphablog/app/assets/config
+  /home/ali/Documents/run_prj/rubyarch/alphablog/app/assets/images
+  /home/ali/Documents/run_prj/rubyarch/alphablog/app/assets/stylesheets
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/stimulus-rails-1.3.3/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/turbo-rails-2.0.5/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/actiontext-7.1.3.2/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/actiontext-7.1.3.2/app/assets/stylesheets
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/actioncable-7.1.3.2/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/activestorage-7.1.3.2/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/actionview-7.1.3.2/app/assets/javascripts
+  /home/ali/Documents/run_prj/rubyarch/alphablog/app/javascript
+  /home/ali/Documents/run_prj/rubyarch/alphablog/vendor/javascript):
+     6:     <%= csrf_meta_tags %>
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     <%= javascript_importmap_tags %>
+    11:   </head>
+    12: 
+  
+app/views/layouts/application.html.erb:9
+Started GET "/" for ::1 at 2024-03-14 17:25:54 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.7ms | Allocations: 193)
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | Allocations: 5105)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.0ms | Allocations: 11897)
+
+
+  
+ActionView::Template::Error (couldn't find file 'bootstrap' with type 'text/css'
+Checked in these paths: 
+  /home/ali/Documents/run_prj/rubyarch/alphablog/app/assets/config
+  /home/ali/Documents/run_prj/rubyarch/alphablog/app/assets/images
+  /home/ali/Documents/run_prj/rubyarch/alphablog/app/assets/stylesheets
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/stimulus-rails-1.3.3/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/turbo-rails-2.0.5/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/actiontext-7.1.3.2/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/actiontext-7.1.3.2/app/assets/stylesheets
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/actioncable-7.1.3.2/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/activestorage-7.1.3.2/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/actionview-7.1.3.2/app/assets/javascripts
+  /home/ali/Documents/run_prj/rubyarch/alphablog/app/javascript
+  /home/ali/Documents/run_prj/rubyarch/alphablog/vendor/javascript):
+     6:     <%= csrf_meta_tags %>
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     <%= javascript_importmap_tags %>
+    11:   </head>
+    12: 
+  
+app/views/layouts/application.html.erb:9
+Started GET "/" for ::1 at 2024-03-14 17:28:42 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.8ms | Allocations: 193)
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 5105)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.0ms | Allocations: 11905)
+
+
+  
+ActionView::Template::Error (couldn't find file 'bootstrap' with type 'text/css'
+Checked in these paths: 
+  /home/ali/Documents/run_prj/rubyarch/alphablog/app/assets/config
+  /home/ali/Documents/run_prj/rubyarch/alphablog/app/assets/images
+  /home/ali/Documents/run_prj/rubyarch/alphablog/app/assets/stylesheets
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/stimulus-rails-1.3.3/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/turbo-rails-2.0.5/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/actiontext-7.1.3.2/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/actiontext-7.1.3.2/app/assets/stylesheets
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/actioncable-7.1.3.2/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/activestorage-7.1.3.2/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/actionview-7.1.3.2/app/assets/javascripts
+  /home/ali/Documents/run_prj/rubyarch/alphablog/app/javascript
+  /home/ali/Documents/run_prj/rubyarch/alphablog/vendor/javascript):
+     6:     <%= csrf_meta_tags %>
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     <%= javascript_importmap_tags %>
+    11:   </head>
+    12: 
+  
+app/views/layouts/application.html.erb:9
+Started GET "/" for ::1 at 2024-03-14 17:35:02 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.7ms | Allocations: 193)
+  Rendered layout layouts/application.html.erb (Duration: 63.7ms | Allocations: 5957)
+Completed 500 Internal Server Error in 81ms (ActiveRecord: 0.0ms | Allocations: 12749)
+
+
+  
+ActionView::Template::Error (couldn't find file 'bootstrap' with type 'text/css'
+Checked in these paths: 
+  /home/ali/Documents/run_prj/rubyarch/alphablog/app/assets/config
+  /home/ali/Documents/run_prj/rubyarch/alphablog/app/assets/images
+  /home/ali/Documents/run_prj/rubyarch/alphablog/app/assets/stylesheets
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/stimulus-rails-1.3.3/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/turbo-rails-2.0.5/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/actiontext-7.1.3.2/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/actiontext-7.1.3.2/app/assets/stylesheets
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/actioncable-7.1.3.2/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/activestorage-7.1.3.2/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/actionview-7.1.3.2/app/assets/javascripts
+  /home/ali/Documents/run_prj/rubyarch/alphablog/app/javascript
+  /home/ali/Documents/run_prj/rubyarch/alphablog/vendor/javascript):
+     6:     <%= csrf_meta_tags %>
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     <%= javascript_importmap_tags %>
+    11:   </head>
+    12: 
+  
+app/views/layouts/application.html.erb:9
+Started GET "/" for ::1 at 2024-03-14 17:35:13 +0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 6)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 3261)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 3582)
+
+
+  
+ActionView::Template::Error (couldn't find file 'bootstrap' with type 'text/css'
+Checked in these paths: 
+  /home/ali/Documents/run_prj/rubyarch/alphablog/app/assets/config
+  /home/ali/Documents/run_prj/rubyarch/alphablog/app/assets/images
+  /home/ali/Documents/run_prj/rubyarch/alphablog/app/assets/stylesheets
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/stimulus-rails-1.3.3/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/turbo-rails-2.0.5/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/actiontext-7.1.3.2/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/actiontext-7.1.3.2/app/assets/stylesheets
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/actioncable-7.1.3.2/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/activestorage-7.1.3.2/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/actionview-7.1.3.2/app/assets/javascripts
+  /home/ali/Documents/run_prj/rubyarch/alphablog/app/javascript
+  /home/ali/Documents/run_prj/rubyarch/alphablog/vendor/javascript):
+     6:     <%= csrf_meta_tags %>
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     <%= javascript_importmap_tags %>
+    11:   </head>
+    12: 
+  
+app/views/layouts/application.html.erb:9
+Started GET "/" for ::1 at 2024-03-14 17:36:10 +0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 6)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 3153)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 3440)
+
+
+  
+ActionView::Template::Error (couldn't find file 'bootstrap' with type 'text/css'
+Checked in these paths: 
+  /home/ali/Documents/run_prj/rubyarch/alphablog/app/assets/config
+  /home/ali/Documents/run_prj/rubyarch/alphablog/app/assets/images
+  /home/ali/Documents/run_prj/rubyarch/alphablog/app/assets/stylesheets
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/stimulus-rails-1.3.3/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/turbo-rails-2.0.5/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/actiontext-7.1.3.2/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/actiontext-7.1.3.2/app/assets/stylesheets
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/actioncable-7.1.3.2/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/activestorage-7.1.3.2/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/actionview-7.1.3.2/app/assets/javascripts
+  /home/ali/Documents/run_prj/rubyarch/alphablog/app/javascript
+  /home/ali/Documents/run_prj/rubyarch/alphablog/vendor/javascript):
+     6:     <%= csrf_meta_tags %>
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     <%= javascript_importmap_tags %>
+    11:   </head>
+    12: 
+  
+app/views/layouts/application.html.erb:9
+Started GET "/" for ::1 at 2024-03-14 17:45:29 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.9ms | Allocations: 193)
+  Rendered layout layouts/application.html.erb (Duration: 20.8ms | Allocations: 5967)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.0ms | Allocations: 12759)
+
+
+  
+ActionView::Template::Error (couldn't find file 'bootstrap' with type 'text/css'
+Checked in these paths: 
+  /home/ali/Documents/run_prj/rubyarch/alphablog/app/assets/config
+  /home/ali/Documents/run_prj/rubyarch/alphablog/app/assets/images
+  /home/ali/Documents/run_prj/rubyarch/alphablog/app/assets/stylesheets
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/stimulus-rails-1.3.3/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/turbo-rails-2.0.5/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/actiontext-7.1.3.2/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/actiontext-7.1.3.2/app/assets/stylesheets
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/actioncable-7.1.3.2/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/activestorage-7.1.3.2/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/actionview-7.1.3.2/app/assets/javascripts
+  /home/ali/Documents/run_prj/rubyarch/alphablog/app/javascript
+  /home/ali/Documents/run_prj/rubyarch/alphablog/vendor/javascript):
+     6:     <%= csrf_meta_tags %>
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     <%= javascript_importmap_tags %>
+    11:   </head>
+    12: 
+  
+app/views/layouts/application.html.erb:9
+Started GET "/" for ::1 at 2024-03-14 17:46:10 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.8ms | Allocations: 193)
+  Rendered layout layouts/application.html.erb (Duration: 19.7ms | Allocations: 5972)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 0.0ms | Allocations: 12764)
+
+
+  
+ActionView::Template::Error (couldn't find file 'bootstrap' with type 'text/css'
+Checked in these paths: 
+  /home/ali/Documents/run_prj/rubyarch/alphablog/app/assets/config
+  /home/ali/Documents/run_prj/rubyarch/alphablog/app/assets/images
+  /home/ali/Documents/run_prj/rubyarch/alphablog/app/assets/stylesheets
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/stimulus-rails-1.3.3/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/turbo-rails-2.0.5/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/actiontext-7.1.3.2/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/actiontext-7.1.3.2/app/assets/stylesheets
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/actioncable-7.1.3.2/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/activestorage-7.1.3.2/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/actionview-7.1.3.2/app/assets/javascripts
+  /home/ali/Documents/run_prj/rubyarch/alphablog/app/javascript
+  /home/ali/Documents/run_prj/rubyarch/alphablog/vendor/javascript):
+     6:     <%= csrf_meta_tags %>
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     <%= javascript_importmap_tags %>
+    11:   </head>
+    12: 
+  
+app/views/layouts/application.html.erb:9
+Started GET "/" for ::1 at 2024-03-14 17:51:36 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.8ms | Allocations: 193)
+  Rendered layout layouts/application.html.erb (Duration: 21.0ms | Allocations: 6007)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 0.0ms | Allocations: 12799)
+
+
+  
+ActionView::Template::Error (couldn't find file 'bootstrap' with type 'text/css'
+Checked in these paths: 
+  /home/ali/Documents/run_prj/rubyarch/alphablog/app/assets/config
+  /home/ali/Documents/run_prj/rubyarch/alphablog/app/assets/images
+  /home/ali/Documents/run_prj/rubyarch/alphablog/app/assets/stylesheets
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/stimulus-rails-1.3.3/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/turbo-rails-2.0.5/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/actiontext-7.1.3.2/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/actiontext-7.1.3.2/app/assets/stylesheets
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/actioncable-7.1.3.2/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/activestorage-7.1.3.2/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/actionview-7.1.3.2/app/assets/javascripts
+  /home/ali/Documents/run_prj/rubyarch/alphablog/app/javascript
+  /home/ali/Documents/run_prj/rubyarch/alphablog/vendor/javascript):
+     6:     <%= csrf_meta_tags %>
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     <%= javascript_importmap_tags %>
+    11:   </head>
+    12: 
+  
+app/views/layouts/application.html.erb:9
+Started GET "/" for ::1 at 2024-03-14 17:53:46 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 193)
+  Rendered layout layouts/application.html.erb (Duration: 29.0ms | Allocations: 5105)
+Completed 500 Internal Server Error in 72ms (ActiveRecord: 0.0ms | Allocations: 11897)
+
+
+  
+ActionView::Template::Error (couldn't find file 'bootstrap' with type 'text/css'
+Checked in these paths: 
+  /home/ali/Documents/run_prj/rubyarch/alphablog/app/assets/config
+  /home/ali/Documents/run_prj/rubyarch/alphablog/app/assets/images
+  /home/ali/Documents/run_prj/rubyarch/alphablog/app/assets/stylesheets
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/stimulus-rails-1.3.3/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/turbo-rails-2.0.5/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/actiontext-7.1.3.2/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/actiontext-7.1.3.2/app/assets/stylesheets
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/actioncable-7.1.3.2/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/activestorage-7.1.3.2/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/actionview-7.1.3.2/app/assets/javascripts
+  /home/ali/Documents/run_prj/rubyarch/alphablog/app/javascript
+  /home/ali/Documents/run_prj/rubyarch/alphablog/vendor/javascript):
+     6:     <%= csrf_meta_tags %>
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     <%= javascript_importmap_tags %>
+    11:   </head>
+    12: 
+  
+app/views/layouts/application.html.erb:9
+Started GET "/" for ::1 at 2024-03-14 17:54:56 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.5ms | Allocations: 193)
+  Rendered layout layouts/application.html.erb (Duration: 42.0ms | Allocations: 5105)
+Completed 500 Internal Server Error in 95ms (ActiveRecord: 0.0ms | Allocations: 11897)
+
+
+  
+ActionView::Template::Error (couldn't find file 'bootstrap' with type 'text/css'
+Checked in these paths: 
+  /home/ali/Documents/run_prj/rubyarch/alphablog/app/assets/config
+  /home/ali/Documents/run_prj/rubyarch/alphablog/app/assets/images
+  /home/ali/Documents/run_prj/rubyarch/alphablog/app/assets/stylesheets
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/stimulus-rails-1.3.3/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/turbo-rails-2.0.5/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/actiontext-7.1.3.2/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/actiontext-7.1.3.2/app/assets/stylesheets
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/actioncable-7.1.3.2/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/activestorage-7.1.3.2/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/actionview-7.1.3.2/app/assets/javascripts
+  /home/ali/Documents/run_prj/rubyarch/alphablog/app/javascript
+  /home/ali/Documents/run_prj/rubyarch/alphablog/vendor/javascript):
+     6:     <%= csrf_meta_tags %>
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     <%= javascript_importmap_tags %>
+    11:   </head>
+    12: 
+  
+app/views/layouts/application.html.erb:9
+Started GET "/" for ::1 at 2024-03-14 17:59:53 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.9ms | Allocations: 193)
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | Allocations: 5099)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.0ms | Allocations: 11891)
+
+
+  
+ActionView::Template::Error (couldn't find file 'bootstrap' with type 'text/css'
+Checked in these paths: 
+  /home/ali/Documents/run_prj/rubyarch/alphablog/app/assets/config
+  /home/ali/Documents/run_prj/rubyarch/alphablog/app/assets/images
+  /home/ali/Documents/run_prj/rubyarch/alphablog/app/assets/stylesheets
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/stimulus-rails-1.3.3/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/turbo-rails-2.0.5/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/actiontext-7.1.3.2/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/actiontext-7.1.3.2/app/assets/stylesheets
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/actioncable-7.1.3.2/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/activestorage-7.1.3.2/app/assets/javascripts
+  /home/ali/.rbenv/versions/3.0.6/lib/ruby/gems/3.0.0/gems/actionview-7.1.3.2/app/assets/javascripts
+  /home/ali/Documents/run_prj/rubyarch/alphablog/app/javascript
+  /home/ali/Documents/run_prj/rubyarch/alphablog/vendor/javascript):
+     6:     <%= csrf_meta_tags %>
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     <%= javascript_importmap_tags %>
+    11:   </head>
+    12: 
+  
+app/views/layouts/application.html.erb:9
+Started GET "/" for ::1 at 2024-03-14 18:00:21 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.9ms | Allocations: 193)
+  Rendered layout layouts/application.html.erb (Duration: 395.7ms | Allocations: 41151)
+Completed 200 OK in 412ms (Views: 401.8ms | ActiveRecord: 0.0ms | Allocations: 47982)
+
+
+Started GET "/uos-detection.insert.js" for ::1 at 2024-03-14 18:00:22 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/uos-detection.insert.js"):
+  
+Started GET "/uos-detection.insert.css" for ::1 at 2024-03-14 18:00:23 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/uos-detection.insert.css"):
+  
+Started GET "/alpha_blogs" for ::1 at 2024-03-14 18:00:34 +0500
+Processing by AlphaBlogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/index.html.erb within layouts/application
+  [1m[36mAlphaBlog Load (0.2ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs"[0m
+  ↳ app/views/alpha_blogs/index.html.erb:6
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 1.7ms | Allocations: 280)
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered alpha_blogs/index.html.erb within layouts/application (Duration: 122.6ms | Allocations: 76963)
+  Rendered layout layouts/application.html.erb (Duration: 125.6ms | Allocations: 78270)
+Completed 200 OK in 312ms (Views: 123.1ms | ActiveRecord: 3.9ms | Allocations: 90504)
+
+
+Started GET "/alpha_blogs" for ::1 at 2024-03-14 20:26:26 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AlphaBlogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/index.html.erb within layouts/application
+  [1m[36mAlphaBlog Load (0.2ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs"[0m
+  ↳ app/views/alpha_blogs/index.html.erb:6
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 1.4ms | Allocations: 288)
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered alpha_blogs/index.html.erb within layouts/application (Duration: 158.8ms | Allocations: 79472)
+  Rendered layout layouts/application.html.erb (Duration: 13381.2ms | Allocations: 242390)
+Completed 500 Internal Server Error in 13608ms (ActiveRecord: 5.2ms | Allocations: 260776)
+
+
+  
+ActionView::Template::Error (Asset `bootstrap.min.js` was not declared to be precompiled in production.
+Declare links to your assets in `app/assets/config/manifest.js`.
+
+  //= link bootstrap.min.js
+
+and restart your server):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     <%= javascript_importmap_tags %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/alpha_blogs" for ::1 at 2024-03-14 20:28:17 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AlphaBlogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/index.html.erb within layouts/application
+  [1m[36mAlphaBlog Load (0.1ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs"[0m
+  ↳ app/views/alpha_blogs/index.html.erb:6
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 1.0ms | Allocations: 293)
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered alpha_blogs/index.html.erb within layouts/application (Duration: 212.7ms | Allocations: 79478)
+  Rendered layout layouts/application.html.erb (Duration: 473.8ms | Allocations: 141130)
+Completed 500 Internal Server Error in 557ms (ActiveRecord: 10.3ms | Allocations: 159516)
+
+
+  
+ActionView::Template::Error (Asset `bootstrap.js` was not declared to be precompiled in production.
+Declare links to your assets in `app/assets/config/manifest.js`.
+
+  //= link bootstrap.js
+
+and restart your server):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     <%= javascript_importmap_tags %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/" for ::1 at 2024-03-14 20:29:15 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.8ms | Allocations: 193)
+  Rendered layout layouts/application.html.erb (Duration: 274.6ms | Allocations: 56427)
+Completed 500 Internal Server Error in 295ms (ActiveRecord: 0.0ms | Allocations: 63217)
+
+
+  
+ActionView::Template::Error (Asset `bootstrap.min.js` was not declared to be precompiled in production.
+Declare links to your assets in `app/assets/config/manifest.js`.
+
+  //= link bootstrap.min.js
+
+and restart your server):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     <%= javascript_importmap_tags %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/" for ::1 at 2024-03-14 20:30:06 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.7ms | Allocations: 193)
+  Rendered layout layouts/application.html.erb (Duration: 427.6ms | Allocations: 69605)
+Completed 500 Internal Server Error in 444ms (ActiveRecord: 0.0ms | Allocations: 76395)
+
+
+  
+ActionView::Template::Error (Asset `popper.js` was not declared to be precompiled in production.
+Declare links to your assets in `app/assets/config/manifest.js`.
+
+  //= link popper.js
+
+and restart your server):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     <%= javascript_importmap_tags %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/" for ::1 at 2024-03-14 20:30:32 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.7ms | Allocations: 193)
+  Rendered layout layouts/application.html.erb (Duration: 303.6ms | Allocations: 61497)
+Completed 200 OK in 320ms (Views: 309.3ms | ActiveRecord: 0.0ms | Allocations: 68340)
+
+
+Started GET "/alpha_blogs/" for ::1 at 2024-03-14 20:30:41 +0500
+Processing by AlphaBlogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/index.html.erb within layouts/application
+  [1m[36mAlphaBlog Load (0.2ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs"[0m
+  ↳ app/views/alpha_blogs/index.html.erb:6
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.9ms | Allocations: 282)
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered alpha_blogs/index.html.erb within layouts/application (Duration: 57.8ms | Allocations: 77009)
+  Rendered layout layouts/application.html.erb (Duration: 68.2ms | Allocations: 81693)
+Completed 200 OK in 94ms (Views: 66.4ms | ActiveRecord: 3.1ms | Allocations: 93922)
+
+
+Started GET "/alpha_blogs/" for ::1 at 2024-03-14 20:35:52 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AlphaBlogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/index.html.erb within layouts/application
+  [1m[36mAlphaBlog Load (0.3ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs"[0m
+  ↳ app/views/alpha_blogs/index.html.erb:6
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 1.2ms | Allocations: 293)
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered alpha_blogs/index.html.erb within layouts/application (Duration: 217.3ms | Allocations: 79455)
+  Rendered layout layouts/application.html.erb (Duration: 359.6ms | Allocations: 128801)
+Completed 200 OK in 401ms (Views: 355.3ms | ActiveRecord: 10.4ms | Allocations: 147225)
+
+
+Started GET "/alpha_blogs/" for ::1 at 2024-03-14 20:37:33 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AlphaBlogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/index.html.erb within layouts/application
+  [1m[36mAlphaBlog Load (0.2ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs"[0m
+  ↳ app/views/alpha_blogs/index.html.erb:6
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.9ms | Allocations: 293)
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered alpha_blogs/index.html.erb within layouts/application (Duration: 214.5ms | Allocations: 79443)
+  Rendered layout layouts/application.html.erb (Duration: 347.1ms | Allocations: 128733)
+Completed 200 OK in 393ms (Views: 334.7ms | ActiveRecord: 19.0ms | Allocations: 147157)
+
+
+Started GET "/alpha_blogs/" for ::1 at 2024-03-14 20:38:20 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AlphaBlogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/index.html.erb within layouts/application
+  [1m[36mAlphaBlog Load (0.2ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs"[0m
+  ↳ app/views/alpha_blogs/index.html.erb:6
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.8ms | Allocations: 293)
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered alpha_blogs/index.html.erb within layouts/application (Duration: 198.5ms | Allocations: 79453)
+  Rendered layout layouts/application.html.erb (Duration: 311.4ms | Allocations: 128161)
+Completed 200 OK in 351ms (Views: 297.4ms | ActiveRecord: 19.6ms | Allocations: 146585)
+
+
+Started GET "/alpha_blogs/" for ::1 at 2024-03-14 20:40:21 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AlphaBlogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/index.html.erb within layouts/application
+  [1m[36mAlphaBlog Load (0.2ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs"[0m
+  ↳ app/views/alpha_blogs/index.html.erb:6
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 1.2ms | Allocations: 293)
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered alpha_blogs/index.html.erb within layouts/application (Duration: 210.4ms | Allocations: 79462)
+  Rendered layout layouts/application.html.erb (Duration: 339.1ms | Allocations: 128379)
+Completed 200 OK in 386ms (Views: 342.4ms | ActiveRecord: 3.2ms | Allocations: 146803)
+
+
+Started GET "/alpha_blogs/" for ::1 at 2024-03-14 20:41:07 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AlphaBlogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/index.html.erb within layouts/application
+  [1m[36mAlphaBlog Load (0.2ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs"[0m
+  ↳ app/views/alpha_blogs/index.html.erb:6
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.9ms | Allocations: 293)
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered alpha_blogs/index.html.erb within layouts/application (Duration: 207.9ms | Allocations: 79468)
+  Rendered layout layouts/application.html.erb (Duration: 348.2ms | Allocations: 128144)
+Completed 200 OK in 389ms (Views: 339.3ms | ActiveRecord: 15.6ms | Allocations: 146569)
+
+
+Started GET "/alpha_blogs/" for ::1 at 2024-03-14 20:41:42 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AlphaBlogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/index.html.erb within layouts/application
+  [1m[36mAlphaBlog Load (0.2ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs"[0m
+  ↳ app/views/alpha_blogs/index.html.erb:6
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.9ms | Allocations: 293)
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered alpha_blogs/index.html.erb within layouts/application (Duration: 199.0ms | Allocations: 79471)
+  Rendered layout layouts/application.html.erb (Duration: 317.7ms | Allocations: 128226)
+Completed 200 OK in 363ms (Views: 309.9ms | ActiveRecord: 14.7ms | Allocations: 146650)
+
+
+Started GET "/alpha_blogs/" for ::1 at 2024-03-14 20:41:46 +0500
+Processing by AlphaBlogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/index.html.erb within layouts/application
+  [1m[36mAlphaBlog Load (0.2ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs"[0m
+  ↳ app/views/alpha_blogs/index.html.erb:6
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.3ms | Allocations: 28)
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered alpha_blogs/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1270)
+  Rendered layout layouts/application.html.erb (Duration: 17.3ms | Allocations: 5939)
+Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.1ms | Allocations: 6343)
+
+
+Started GET "/alpha_blogs/" for ::1 at 2024-03-14 20:42:43 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AlphaBlogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/index.html.erb within layouts/application
+  [1m[36mAlphaBlog Load (0.2ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs"[0m
+  ↳ app/views/alpha_blogs/index.html.erb:6
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 1.0ms | Allocations: 293)
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered alpha_blogs/index.html.erb within layouts/application (Duration: 218.7ms | Allocations: 79450)
+  Rendered layout layouts/application.html.erb (Duration: 345.9ms | Allocations: 128364)
+Completed 200 OK in 385ms (Views: 342.5ms | ActiveRecord: 9.6ms | Allocations: 146789)
+
+
+Started GET "/alpha_blogs/" for ::1 at 2024-03-14 20:43:11 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AlphaBlogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/index.html.erb within layouts/application
+  [1m[36mAlphaBlog Load (7.1ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs"[0m
+  ↳ app/views/alpha_blogs/index.html.erb:6
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.8ms | Allocations: 293)
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered alpha_blogs/index.html.erb within layouts/application (Duration: 212.4ms | Allocations: 79472)
+  Rendered layout layouts/application.html.erb (Duration: 342.7ms | Allocations: 128220)
+Completed 200 OK in 385ms (Views: 343.4ms | ActiveRecord: 4.7ms | Allocations: 146644)
+
+
+Started GET "/alpha_blogs/" for ::1 at 2024-03-14 20:45:02 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AlphaBlogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/index.html.erb within layouts/application
+  [1m[36mAlphaBlog Load (0.2ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs"[0m
+  ↳ app/views/alpha_blogs/index.html.erb:6
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.8ms | Allocations: 293)
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered alpha_blogs/index.html.erb within layouts/application (Duration: 200.9ms | Allocations: 79450)
+  Rendered layout layouts/application.html.erb (Duration: 319.5ms | Allocations: 128189)
+Completed 200 OK in 362ms (Views: 322.5ms | ActiveRecord: 3.2ms | Allocations: 146614)
+
+
+Started GET "/alpha_blogs/2" for ::1 at 2024-03-14 20:45:06 +0500
+Processing by AlphaBlogsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAlphaBlog Load (0.2ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:65:in `set_alpha_blog'
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/show.html.erb within layouts/application
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 28)
+  Rendered alpha_blogs/show.html.erb within layouts/application (Duration: 3.2ms | Allocations: 915)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 5556)
+Completed 200 OK in 44ms (Views: 14.7ms | ActiveRecord: 0.2ms | Allocations: 8848)
+
+
+Started GET "/alpha_blogs/2" for ::1 at 2024-03-14 20:45:07 +0500
+Processing by AlphaBlogsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAlphaBlog Load (0.1ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:65:in `set_alpha_blog'
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/show.html.erb within layouts/application
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered alpha_blogs/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 496)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 5025)
+Completed 200 OK in 16ms (Views: 13.7ms | ActiveRecord: 0.1ms | Allocations: 5893)
+
+
+Started GET "/alpha_blogs/2" for ::1 at 2024-03-14 20:46:33 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AlphaBlogsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAlphaBlog Load (0.3ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:65:in `set_alpha_blog'
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/show.html.erb within layouts/application
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.7ms | Allocations: 288)
+  Rendered alpha_blogs/show.html.erb within layouts/application (Duration: 14.4ms | Allocations: 4140)
+  Rendered layout layouts/application.html.erb (Duration: 134.1ms | Allocations: 52821)
+Completed 200 OK in 366ms (Views: 141.5ms | ActiveRecord: 3.5ms | Allocations: 148680)
+
+
+Started GET "/alpha_blogs/2/edit" for ::1 at 2024-03-14 20:46:36 +0500
+Processing by AlphaBlogsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAlphaBlog Load (0.1ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:65:in `set_alpha_blog'
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/edit.html.erb within layouts/application
+  Rendered alpha_blogs/_form.html.erb (Duration: 54.0ms | Allocations: 2852)
+  Rendered alpha_blogs/edit.html.erb within layouts/application (Duration: 55.6ms | Allocations: 3253)
+  Rendered layout layouts/application.html.erb (Duration: 66.0ms | Allocations: 7903)
+Completed 200 OK in 70ms (Views: 66.9ms | ActiveRecord: 0.1ms | Allocations: 8994)
+
+
+Started GET "/alpha_blogs" for ::1 at 2024-03-14 20:46:37 +0500
+Processing by AlphaBlogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/index.html.erb within layouts/application
+  [1m[36mAlphaBlog Load (0.2ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs"[0m
+  ↳ app/views/alpha_blogs/index.html.erb:6
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.2ms | Allocations: 23)
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered alpha_blogs/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 1511)
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | Allocations: 6060)
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.2ms | Allocations: 6546)
+
+
+Started GET "/alpha_blogs/2" for ::1 at 2024-03-14 20:46:39 +0500
+Processing by AlphaBlogsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAlphaBlog Load (0.1ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:65:in `set_alpha_blog'
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/show.html.erb within layouts/application
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.2ms | Allocations: 19)
+  Rendered alpha_blogs/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 486)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 5015)
+Completed 200 OK in 16ms (Views: 13.4ms | ActiveRecord: 0.1ms | Allocations: 5898)
+
+
+Started GET "/alpha_blogs/2/edit" for ::1 at 2024-03-14 20:46:42 +0500
+Processing by AlphaBlogsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAlphaBlog Load (0.1ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:65:in `set_alpha_blog'
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/edit.html.erb within layouts/application
+  Rendered alpha_blogs/_form.html.erb (Duration: 2.5ms | Allocations: 871)
+  Rendered alpha_blogs/edit.html.erb within layouts/application (Duration: 3.2ms | Allocations: 976)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 5504)
+Completed 200 OK in 18ms (Views: 16.0ms | ActiveRecord: 0.1ms | Allocations: 6344)
+
+
+Started GET "/alpha_blogs" for ::1 at 2024-03-14 20:46:47 +0500
+Processing by AlphaBlogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/index.html.erb within layouts/application
+  [1m[36mAlphaBlog Load (0.2ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs"[0m
+  ↳ app/views/alpha_blogs/index.html.erb:6
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered alpha_blogs/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1060)
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 5606)
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.1ms | Allocations: 5946)
+
+
+Started GET "/alpha_blogs" for ::1 at 2024-03-14 20:46:48 +0500
+Processing by AlphaBlogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/index.html.erb within layouts/application
+  [1m[36mAlphaBlog Load (0.1ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs"[0m
+  ↳ app/views/alpha_blogs/index.html.erb:6
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered alpha_blogs/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1069)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 5614)
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.1ms | Allocations: 5945)
+
+
+Started GET "/alpha_blogs" for ::1 at 2024-03-14 20:47:46 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AlphaBlogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/index.html.erb within layouts/application
+  [1m[36mAlphaBlog Load (0.3ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs"[0m
+  ↳ app/views/alpha_blogs/index.html.erb:6
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.9ms | Allocations: 293)
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered alpha_blogs/index.html.erb within layouts/application (Duration: 218.6ms | Allocations: 79473)
+  Rendered layout layouts/application.html.erb (Duration: 348.8ms | Allocations: 128240)
+Completed 200 OK in 387ms (Views: 339.0ms | ActiveRecord: 16.2ms | Allocations: 146664)
+
+
+Started GET "/alpha_blogs/3" for ::1 at 2024-03-14 20:47:47 +0500
+Processing by AlphaBlogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAlphaBlog Load (0.2ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:65:in `set_alpha_blog'
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/show.html.erb within layouts/application
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 28)
+  Rendered alpha_blogs/show.html.erb within layouts/application (Duration: 2.8ms | Allocations: 904)
+  Rendered layout layouts/application.html.erb (Duration: 15.6ms | Allocations: 5545)
+Completed 200 OK in 24ms (Views: 16.6ms | ActiveRecord: 0.2ms | Allocations: 8837)
+
+
+Started GET "/alpha_blogs/2" for ::1 at 2024-03-14 20:47:47 +0500
+Processing by AlphaBlogsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAlphaBlog Load (0.1ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:65:in `set_alpha_blog'
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/show.html.erb within layouts/application
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered alpha_blogs/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 487)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 5016)
+Completed 200 OK in 17ms (Views: 14.3ms | ActiveRecord: 0.1ms | Allocations: 5884)
+
+
+Started GET "/alpha_blogs/2/edit" for ::1 at 2024-03-14 20:47:49 +0500
+Processing by AlphaBlogsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAlphaBlog Load (0.1ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:65:in `set_alpha_blog'
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/edit.html.erb within layouts/application
+  Rendered alpha_blogs/_form.html.erb (Duration: 6.5ms | Allocations: 2823)
+  Rendered alpha_blogs/edit.html.erb within layouts/application (Duration: 8.1ms | Allocations: 3197)
+  Rendered layout layouts/application.html.erb (Duration: 17.7ms | Allocations: 7846)
+Completed 200 OK in 22ms (Views: 18.6ms | ActiveRecord: 0.1ms | Allocations: 8787)
+
+
+Started GET "/alpha_blogs/2/edit" for ::1 at 2024-03-14 20:47:51 +0500
+Processing by AlphaBlogsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAlphaBlog Load (0.1ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:65:in `set_alpha_blog'
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/edit.html.erb within layouts/application
+  Rendered alpha_blogs/_form.html.erb (Duration: 2.4ms | Allocations: 859)
+  Rendered alpha_blogs/edit.html.erb within layouts/application (Duration: 2.9ms | Allocations: 967)
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 5496)
+Completed 200 OK in 18ms (Views: 15.3ms | ActiveRecord: 0.1ms | Allocations: 6440)
+
+
+Started GET "/alpha_blogs/2/edit" for ::1 at 2024-03-14 20:47:53 +0500
+Processing by AlphaBlogsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAlphaBlog Load (0.1ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:65:in `set_alpha_blog'
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/edit.html.erb within layouts/application
+  Rendered alpha_blogs/_form.html.erb (Duration: 2.3ms | Allocations: 845)
+  Rendered alpha_blogs/edit.html.erb within layouts/application (Duration: 2.9ms | Allocations: 949)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 5477)
+Completed 200 OK in 19ms (Views: 16.4ms | ActiveRecord: 0.1ms | Allocations: 6316)
+
+
+Started GET "/alpha_blogs/2" for ::1 at 2024-03-14 20:47:56 +0500
+Processing by AlphaBlogsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAlphaBlog Load (0.1ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:65:in `set_alpha_blog'
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/show.html.erb within layouts/application
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.2ms | Allocations: 23)
+  Rendered alpha_blogs/show.html.erb within layouts/application (Duration: 2.3ms | Allocations: 501)
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 5030)
+Completed 200 OK in 19ms (Views: 16.2ms | ActiveRecord: 0.1ms | Allocations: 5870)
+
+
+Started GET "/alpha_blogs/2" for ::1 at 2024-03-14 20:47:56 +0500
+Processing by AlphaBlogsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAlphaBlog Load (0.1ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:65:in `set_alpha_blog'
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/show.html.erb within layouts/application
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered alpha_blogs/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 493)
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 5021)
+Completed 200 OK in 15ms (Views: 12.7ms | ActiveRecord: 0.1ms | Allocations: 5861)
+
+
+Started GET "/alpha_blogs/2/edit" for ::1 at 2024-03-14 20:48:48 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AlphaBlogsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAlphaBlog Load (0.2ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:65:in `set_alpha_blog'
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/edit.html.erb within layouts/application
+  Rendered alpha_blogs/_form.html.erb (Duration: 19.1ms | Allocations: 5329)
+  Rendered alpha_blogs/edit.html.erb within layouts/application (Duration: 21.2ms | Allocations: 5883)
+  Rendered layout layouts/application.html.erb (Duration: 144.9ms | Allocations: 54610)
+Completed 200 OK in 367ms (Views: 151.0ms | ActiveRecord: 4.0ms | Allocations: 150439)
+
+
+Started GET "/alpha_blogs/2/edit" for ::1 at 2024-03-14 20:49:53 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AlphaBlogsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAlphaBlog Load (0.3ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:65:in `set_alpha_blog'
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/edit.html.erb within layouts/application
+  Rendered alpha_blogs/_form.html.erb (Duration: 18.4ms | Allocations: 5327)
+  Rendered alpha_blogs/edit.html.erb within layouts/application (Duration: 20.2ms | Allocations: 5881)
+  Rendered layout layouts/application.html.erb (Duration: 147.5ms | Allocations: 54787)
+Completed 200 OK in 364ms (Views: 153.6ms | ActiveRecord: 3.2ms | Allocations: 150616)
+
+

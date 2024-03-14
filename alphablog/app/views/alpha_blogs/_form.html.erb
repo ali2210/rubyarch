@@ -1,6 +1,6 @@
 <%= form_with(model: alpha_blog) do |form| %>
   <% if alpha_blog.errors.any? %>
-    <div style="color: red">
+    <div style="color: red; ">
       <h2><%= pluralize(alpha_blog.errors.count, "error") %> prohibited this alpha_blog from being saved:</h2>
 
       <ul>
@@ -11,17 +11,17 @@
     </div>
   <% end %>
 
-  <div>
+  <div style="position: relative; left : 5pc; width : 30pc;">
     <%= form.label :title, style: "display: block" %>
     <%= form.text_field :title %>
   </div>
 
-  <div>
+  <div style="position: relative; left : 5pc; width : 30pc;">
     <%= form.label :description, style: "display: block" %>
     <%= form.text_area :description %>
   </div>
 
-  <div>
+  <div style="position: relative; left : 5pc;">
     <%= form.submit %>
   </div>
 <% end %>
