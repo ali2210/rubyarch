@@ -1890,3 +1890,952 @@ Processing by AlphaBlogsController#edit as HTML
 Completed 200 OK in 364ms (Views: 153.6ms | ActiveRecord: 3.2ms | Allocations: 150616)
 
 
+Started GET "/alpha_blogs/2/edit" for ::1 at 2024-03-14 20:58:17 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AlphaBlogsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAlphaBlog Load (0.3ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:65:in `set_alpha_blog'
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/edit.html.erb within layouts/application
+  Rendered alpha_blogs/_form.html.erb (Duration: 17.7ms | Allocations: 5372)
+  Rendered alpha_blogs/edit.html.erb within layouts/application (Duration: 19.4ms | Allocations: 5926)
+  Rendered layout layouts/application.html.erb (Duration: 133.0ms | Allocations: 54628)
+Completed 200 OK in 356ms (Views: 138.6ms | ActiveRecord: 3.4ms | Allocations: 150457)
+
+
+Started GET "/alpha_blogs/2/edit" for ::1 at 2024-03-14 20:58:19 +0500
+Processing by AlphaBlogsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAlphaBlog Load (0.1ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:65:in `set_alpha_blog'
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/edit.html.erb within layouts/application
+  Rendered alpha_blogs/_form.html.erb (Duration: 2.9ms | Allocations: 1025)
+  Rendered alpha_blogs/edit.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1144)
+  Rendered layout layouts/application.html.erb (Duration: 16.9ms | Allocations: 5779)
+Completed 200 OK in 22ms (Views: 17.8ms | ActiveRecord: 0.1ms | Allocations: 6774)
+
+
+Started GET "/alpha_blogs/2" for ::1 at 2024-03-14 20:58:21 +0500
+Processing by AlphaBlogsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAlphaBlog Load (0.1ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:65:in `set_alpha_blog'
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/show.html.erb within layouts/application
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.7ms | Allocations: 253)
+  Rendered alpha_blogs/show.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1418)
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 6062)
+Completed 200 OK in 19ms (Views: 15.6ms | ActiveRecord: 0.1ms | Allocations: 7047)
+
+
+Started GET "/alpha_blogs" for ::1 at 2024-03-14 20:58:22 +0500
+Processing by AlphaBlogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/index.html.erb within layouts/application
+  Rendered alpha_blogs/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 2070)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 2169)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 2652)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p style="color: green"><%= notice %></p>
+
+<h1 style="color: red; position : relative ; left : 2pc"> Alpha blogs</h1>
+
+<div id="alpha_blogs" style="position: relative; left : 5pc; width : 30pc;">
+  <% @alpha_blogs.each do |alpha_blog| %>
+    <%= render alpha_blog %>
+    <p>
+      <%= link_to "Show this alpha blog", alpha_blog, class: "text-red" %>
+    </p>
+  <% end %>
+</div>
+
+<div style="position : relative ; left : 7pc; color : red">
+    <p>
+        <%= link_to "New alpha blog", new_alpha_blog_path class: "text-red" %>
+    </p>
+</div>
+
+):
+1:    <p style="color: green"><%= notice %></p>
+2:    
+3:    <h1 style="color: red; position : relative ; left : 2pc"> Alpha blogs</h1>
+4:    
+5:    <div id="alpha_blogs" style="position: relative; left : 5pc; width : 30pc;">
+6:      <% @alpha_blogs.each do |alpha_blog| %>
+7:        <%= render alpha_blog %>
+8:        <p>
+9:          <%= link_to "Show this alpha blog", alpha_blog, class: "text-red" %>
+10:        </p>
+11:      <% end %>
+12:    </div>
+13:    
+14:    <div style="position : relative ; left : 7pc; color : red">
+15:        <p>
+16:            <%= link_to "New alpha blog", new_alpha_blog_path class: "text-red" %>
+17:        </p>
+18:    </div>
+  
+app/views/alpha_blogs/index.html.erb:16: syntax error, unexpected label, expecting `do' or '{' or '('
+Started GET "/alpha_blogs" for ::1 at 2024-03-14 20:59:41 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AlphaBlogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/index.html.erb within layouts/application
+  Rendered alpha_blogs/index.html.erb within layouts/application (Duration: 22.2ms | Allocations: 2168)
+  Rendered layout layouts/application.html.erb (Duration: 29.0ms | Allocations: 2303)
+Completed 500 Internal Server Error in 71ms (ActiveRecord: 0.0ms | Allocations: 20711)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p style="color: green"><%= notice %></p>
+
+<h1 style="color: red; position : relative ; left : 2pc"> Alpha blogs</h1>
+
+<div id="alpha_blogs" style="position: relative; left : 5pc; width : 30pc;">
+  <% @alpha_blogs.each do |alpha_blog| %>
+    <%= render alpha_blog %>
+    <p>
+      <%= link_to "Show this alpha blog", alpha_blog, class: "text-white" %>
+    </p>
+  <% end %>
+</div>
+
+<div style="position : relative ; left : 7pc; color : red">
+    <p>
+        <%= link_to "New alpha blog", new_alpha_blog_path class: "text-white" %>
+    </p>
+</div>
+
+):
+1:    <p style="color: green"><%= notice %></p>
+2:    
+3:    <h1 style="color: red; position : relative ; left : 2pc"> Alpha blogs</h1>
+4:    
+5:    <div id="alpha_blogs" style="position: relative; left : 5pc; width : 30pc;">
+6:      <% @alpha_blogs.each do |alpha_blog| %>
+7:        <%= render alpha_blog %>
+8:        <p>
+9:          <%= link_to "Show this alpha blog", alpha_blog, class: "text-white" %>
+10:        </p>
+11:      <% end %>
+12:    </div>
+13:    
+14:    <div style="position : relative ; left : 7pc; color : red">
+15:        <p>
+16:            <%= link_to "New alpha blog", new_alpha_blog_path class: "text-white" %>
+17:        </p>
+18:    </div>
+  
+app/views/alpha_blogs/index.html.erb:16: syntax error, unexpected label, expecting `do' or '{' or '('
+Started GET "/alpha_blogs" for ::1 at 2024-03-14 21:00:10 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AlphaBlogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/index.html.erb within layouts/application
+  [1m[36mAlphaBlog Load (0.2ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs"[0m
+  ↳ app/views/alpha_blogs/index.html.erb:6
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.9ms | Allocations: 293)
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered alpha_blogs/index.html.erb within layouts/application (Duration: 213.7ms | Allocations: 79447)
+  Rendered layout layouts/application.html.erb (Duration: 362.3ms | Allocations: 128202)
+Completed 200 OK in 409ms (Views: 357.3ms | ActiveRecord: 11.4ms | Allocations: 146627)
+
+
+Started GET "/alpha_blogs" for ::1 at 2024-03-14 21:02:24 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AlphaBlogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/index.html.erb within layouts/application
+  [1m[36mAlphaBlog Load (0.3ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs"[0m
+  ↳ app/views/alpha_blogs/index.html.erb:6
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.9ms | Allocations: 293)
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered alpha_blogs/index.html.erb within layouts/application (Duration: 218.7ms | Allocations: 79475)
+  Rendered layout layouts/application.html.erb (Duration: 337.7ms | Allocations: 128187)
+Completed 200 OK in 378ms (Views: 339.8ms | ActiveRecord: 3.8ms | Allocations: 146611)
+
+
+Started GET "/alpha_blogs/new" for ::1 at 2024-03-14 21:02:25 +0500
+Processing by AlphaBlogsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/new.html.erb within layouts/application
+  Rendered alpha_blogs/_form.html.erb (Duration: 6.7ms | Allocations: 2803)
+  Rendered alpha_blogs/new.html.erb within layouts/application (Duration: 8.0ms | Allocations: 3150)
+  Rendered layout layouts/application.html.erb (Duration: 18.5ms | Allocations: 7809)
+Completed 200 OK in 21ms (Views: 19.5ms | ActiveRecord: 0.0ms | Allocations: 8344)
+
+
+Started GET "/alpha_blogs" for ::1 at 2024-03-14 21:03:04 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AlphaBlogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/index.html.erb within layouts/application
+  Rendered alpha_blogs/index.html.erb within layouts/application (Duration: 22.8ms | Allocations: 2170)
+  Rendered layout layouts/application.html.erb (Duration: 23.5ms | Allocations: 2305)
+Completed 500 Internal Server Error in 68ms (ActiveRecord: 0.0ms | Allocations: 20713)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p style="color: green"><%= notice %></p>
+
+<h1 style="color: red; position : relative ; left : 2pc"> Alpha blogs</h1>
+
+<div id="alpha_blogs" style="position: relative; left : 5pc; width : 30pc;">
+  <% @alpha_blogs.each do |alpha_blog| %>
+    <%= render alpha_blog %>
+    <p>
+      <%= link_to "Show this alpha blog", alpha_blog , ,  class: "btn btn-outline-success" %>
+    </p>
+  <% end %>
+</div>
+
+<div style="position : relative ; left : 7pc; color : red">
+    <p>
+        <%= link_to "New alpha blog", new_alpha_blog_path ,  class: "btn btn-outline-success" %>
+    </p>
+</div>
+
+):
+1:    <p style="color: green"><%= notice %></p>
+2:    
+3:    <h1 style="color: red; position : relative ; left : 2pc"> Alpha blogs</h1>
+4:    
+5:    <div id="alpha_blogs" style="position: relative; left : 5pc; width : 30pc;">
+6:      <% @alpha_blogs.each do |alpha_blog| %>
+7:        <%= render alpha_blog %>
+8:        <p>
+9:          <%= link_to "Show this alpha blog", alpha_blog , ,  class: "btn btn-outline-success" %>
+10:        </p>
+11:      <% end %>
+12:    </div>
+13:    
+14:    <div style="position : relative ; left : 7pc; color : red">
+15:        <p>
+16:            <%= link_to "New alpha blog", new_alpha_blog_path ,  class: "btn btn-outline-success" %>
+17:        </p>
+18:    </div>
+  
+app/views/alpha_blogs/index.html.erb:9: syntax error, unexpected ','
+Started GET "/alpha_blogs" for ::1 at 2024-03-14 21:03:32 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AlphaBlogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/index.html.erb within layouts/application
+  Rendered alpha_blogs/index.html.erb within layouts/application (Duration: 22.0ms | Allocations: 2168)
+  Rendered layout layouts/application.html.erb (Duration: 22.6ms | Allocations: 2303)
+Completed 500 Internal Server Error in 67ms (ActiveRecord: 0.0ms | Allocations: 20712)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p style="color: green"><%= notice %></p>
+
+<h1 style="color: red; position : relative ; left : 2pc"> Alpha blogs</h1>
+
+<div id="alpha_blogs" style="position: relative; left : 5pc; width : 30pc;">
+  <% @alpha_blogs.each do |alpha_blog| %>
+    <%= render alpha_blog %>
+    <p>
+      <%= link_to "Show this alpha blog", alpha_blog , ,  class: "btn btn-outline-info" %>
+    </p>
+  <% end %>
+</div>
+
+<div style="position : relative ; left : 7pc; color : red">
+    <p>
+        <%= link_to "New alpha blog", new_alpha_blog_path ,  class: "btn btn-outline-info" %>
+    </p>
+</div>
+
+):
+1:    <p style="color: green"><%= notice %></p>
+2:    
+3:    <h1 style="color: red; position : relative ; left : 2pc"> Alpha blogs</h1>
+4:    
+5:    <div id="alpha_blogs" style="position: relative; left : 5pc; width : 30pc;">
+6:      <% @alpha_blogs.each do |alpha_blog| %>
+7:        <%= render alpha_blog %>
+8:        <p>
+9:          <%= link_to "Show this alpha blog", alpha_blog , ,  class: "btn btn-outline-info" %>
+10:        </p>
+11:      <% end %>
+12:    </div>
+13:    
+14:    <div style="position : relative ; left : 7pc; color : red">
+15:        <p>
+16:            <%= link_to "New alpha blog", new_alpha_blog_path ,  class: "btn btn-outline-info" %>
+17:        </p>
+18:    </div>
+  
+app/views/alpha_blogs/index.html.erb:9: syntax error, unexpected ','
+Started GET "/alpha_blogs" for ::1 at 2024-03-14 21:03:56 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AlphaBlogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/index.html.erb within layouts/application
+  [1m[36mAlphaBlog Load (0.2ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs"[0m
+  ↳ app/views/alpha_blogs/index.html.erb:6
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.8ms | Allocations: 293)
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered alpha_blogs/index.html.erb within layouts/application (Duration: 204.2ms | Allocations: 79495)
+  Rendered layout layouts/application.html.erb (Duration: 332.0ms | Allocations: 128310)
+Completed 200 OK in 371ms (Views: 323.1ms | ActiveRecord: 15.1ms | Allocations: 146734)
+
+
+Started GET "/alpha_blogs/2" for ::1 at 2024-03-14 21:03:58 +0500
+Processing by AlphaBlogsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAlphaBlog Load (0.2ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:65:in `set_alpha_blog'
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/show.html.erb within layouts/application
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 28)
+  Rendered alpha_blogs/show.html.erb within layouts/application (Duration: 3.0ms | Allocations: 913)
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 5554)
+Completed 200 OK in 23ms (Views: 16.0ms | ActiveRecord: 0.2ms | Allocations: 8846)
+
+
+Started GET "/alpha_blogs/3" for ::1 at 2024-03-14 21:03:59 +0500
+Processing by AlphaBlogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAlphaBlog Load (0.2ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:65:in `set_alpha_blog'
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/show.html.erb within layouts/application
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered alpha_blogs/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 490)
+  Rendered layout layouts/application.html.erb (Duration: 16.9ms | Allocations: 5019)
+Completed 200 OK in 22ms (Views: 18.0ms | ActiveRecord: 0.2ms | Allocations: 5887)
+
+
+Started GET "/alpha_blogs" for ::1 at 2024-03-14 21:04:35 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AlphaBlogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/index.html.erb within layouts/application
+  [1m[36mAlphaBlog Load (5.0ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs"[0m
+  ↳ app/views/alpha_blogs/index.html.erb:6
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.8ms | Allocations: 293)
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered alpha_blogs/index.html.erb within layouts/application (Duration: 202.5ms | Allocations: 79484)
+  Rendered layout layouts/application.html.erb (Duration: 326.1ms | Allocations: 128880)
+Completed 200 OK in 364ms (Views: 324.2ms | ActiveRecord: 8.1ms | Allocations: 147304)
+
+
+Started GET "/alpha_blogs" for ::1 at 2024-03-14 21:06:24 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AlphaBlogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/index.html.erb within layouts/application
+  [1m[36mAlphaBlog Load (0.2ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs"[0m
+  ↳ app/views/alpha_blogs/index.html.erb:6
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.9ms | Allocations: 293)
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered alpha_blogs/index.html.erb within layouts/application (Duration: 225.5ms | Allocations: 79489)
+  Rendered layout layouts/application.html.erb (Duration: 358.6ms | Allocations: 128200)
+Completed 200 OK in 403ms (Views: 347.7ms | ActiveRecord: 16.7ms | Allocations: 146624)
+
+
+Started GET "/alpha_blogs/new" for ::1 at 2024-03-14 21:06:30 +0500
+Processing by AlphaBlogsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/new.html.erb within layouts/application
+  Rendered alpha_blogs/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 2023)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 2123)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 2667)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1 style="color: red"> New alpha blog</h1>
+
+<%= render "form", alpha_blog: @alpha_blog %>
+
+<br>
+
+<div style="position: relative; left : 5pc; width : 30pc;">
+  <%= link_to "Back to alpha blogs", alpha_blogs_path, ,  class: "btn btn-outline-info" %>
+</div>
+
+):
+1:    <h1 style="color: red"> New alpha blog</h1>
+2:    
+3:    <%= render "form", alpha_blog: @alpha_blog %>
+4:    
+5:    <br>
+6:    
+7:    <div style="position: relative; left : 5pc; width : 30pc;">
+8:      <%= link_to "Back to alpha blogs", alpha_blogs_path, ,  class: "btn btn-outline-info" %>
+9:    </div>
+  
+app/views/alpha_blogs/new.html.erb:8: syntax error, unexpected ','
+Started GET "/alpha_blogs/3" for ::1 at 2024-03-14 21:06:31 +0500
+Processing by AlphaBlogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAlphaBlog Load (0.3ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:65:in `set_alpha_blog'
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/show.html.erb within layouts/application
+  Rendered alpha_blogs/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1352)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 1740)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.2ms | Allocations: 6986)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p style="color: green"><%= notice %></p>
+
+<%= render @alpha_blog %>
+
+<div style="color : red; position: relative; left : 5pc; width : 30pc;">
+  <%= link_to "Edit this alpha blog", edit_alpha_blog_path(@alpha_blog) , ,  class: "btn btn-outline-info" %> |
+  <%= link_to "Back to alpha blogs", alpha_blogs_path ,  class: "btn btn-outline-info" %>
+  <%= button_to "Destroy this alpha blog", @alpha_blog, ,  class: "btn btn-outline-info", method: :delete %>
+</div>
+
+):
+1:    <p style="color: green"><%= notice %></p>
+2:    
+3:    <%= render @alpha_blog %>
+4:    
+5:    <div style="color : red; position: relative; left : 5pc; width : 30pc;">
+6:      <%= link_to "Edit this alpha blog", edit_alpha_blog_path(@alpha_blog) , ,  class: "btn btn-outline-info" %> |
+7:      <%= link_to "Back to alpha blogs", alpha_blogs_path ,  class: "btn btn-outline-info" %>
+8:      <%= button_to "Destroy this alpha blog", @alpha_blog, ,  class: "btn btn-outline-info", method: :delete %>
+9:    </div>
+  
+app/views/alpha_blogs/show.html.erb:6: syntax error, unexpected ','
+app/views/alpha_blogs/show.html.erb:8: syntax error, unexpected ','
+app/views/alpha_blogs/show.html.erb:8: syntax error, unexpected ',', expecting ')'
+Started GET "/alpha_blogs/3" for ::1 at 2024-03-14 21:06:54 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AlphaBlogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAlphaBlog Load (0.2ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:65:in `set_alpha_blog'
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/show.html.erb within layouts/application
+  Rendered alpha_blogs/show.html.erb within layouts/application (Duration: 2.9ms | Allocations: 2077)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 2215)
+Completed 500 Internal Server Error in 228ms (ActiveRecord: 4.1ms | Allocations: 98064)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p style="color: green"><%= notice %></p>
+
+<%= render @alpha_blog %>
+
+<div style="color : red; position: relative; left : 5pc; width : 30pc;">
+  <%= link_to "Edit this alpha blog", edit_alpha_blog_path(@alpha_blog) , class: "btn btn-outline-info" %> |
+  <%= link_to "Back to alpha blogs", alpha_blogs_path ,  class: "btn btn-outline-info" %>
+  <%= button_to "Destroy this alpha blog", @alpha_blog, ,  class: "btn btn-outline-info", method: :delete %>
+</div>
+
+):
+1:    <p style="color: green"><%= notice %></p>
+2:    
+3:    <%= render @alpha_blog %>
+4:    
+5:    <div style="color : red; position: relative; left : 5pc; width : 30pc;">
+6:      <%= link_to "Edit this alpha blog", edit_alpha_blog_path(@alpha_blog) , class: "btn btn-outline-info" %> |
+7:      <%= link_to "Back to alpha blogs", alpha_blogs_path ,  class: "btn btn-outline-info" %>
+8:      <%= button_to "Destroy this alpha blog", @alpha_blog, ,  class: "btn btn-outline-info", method: :delete %>
+9:    </div>
+  
+app/views/alpha_blogs/show.html.erb:8: syntax error, unexpected ','
+app/views/alpha_blogs/show.html.erb:8: syntax error, unexpected ',', expecting ')'
+Started GET "/alpha_blogs/3" for ::1 at 2024-03-14 21:07:29 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AlphaBlogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAlphaBlog Load (0.2ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:65:in `set_alpha_blog'
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/show.html.erb within layouts/application
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.8ms | Allocations: 288)
+  Rendered alpha_blogs/show.html.erb within layouts/application (Duration: 15.8ms | Allocations: 4146)
+  Rendered layout layouts/application.html.erb (Duration: 148.1ms | Allocations: 52818)
+Completed 200 OK in 384ms (Views: 154.7ms | ActiveRecord: 3.7ms | Allocations: 148685)
+
+
+Started GET "/alpha_blogs/3/edit" for ::1 at 2024-03-14 21:07:30 +0500
+Processing by AlphaBlogsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAlphaBlog Load (0.2ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:65:in `set_alpha_blog'
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/edit.html.erb within layouts/application
+  Rendered alpha_blogs/_form.html.erb (Duration: 6.9ms | Allocations: 2840)
+  Rendered alpha_blogs/edit.html.erb within layouts/application (Duration: 8.4ms | Allocations: 3242)
+  Rendered layout layouts/application.html.erb (Duration: 19.0ms | Allocations: 7892)
+Completed 200 OK in 24ms (Views: 20.0ms | ActiveRecord: 0.1ms | Allocations: 8983)
+
+
+Started GET "/alpha_blogs" for ::1 at 2024-03-14 21:07:32 +0500
+Processing by AlphaBlogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/index.html.erb within layouts/application
+  [1m[36mAlphaBlog Load (0.4ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs"[0m
+  ↳ app/views/alpha_blogs/index.html.erb:6
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.2ms | Allocations: 23)
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered alpha_blogs/index.html.erb within layouts/application (Duration: 7.1ms | Allocations: 1531)
+  Rendered layout layouts/application.html.erb (Duration: 19.1ms | Allocations: 6080)
+Completed 200 OK in 22ms (Views: 20.2ms | ActiveRecord: 0.4ms | Allocations: 6566)
+
+
+Started GET "/alpha_blogs/3/edit" for ::1 at 2024-03-14 21:07:36 +0500
+Processing by AlphaBlogsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAlphaBlog Load (0.2ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:65:in `set_alpha_blog'
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/edit.html.erb within layouts/application
+  Rendered alpha_blogs/_form.html.erb (Duration: 3.7ms | Allocations: 883)
+  Rendered alpha_blogs/edit.html.erb within layouts/application (Duration: 4.7ms | Allocations: 988)
+  Rendered layout layouts/application.html.erb (Duration: 19.6ms | Allocations: 5517)
+Completed 200 OK in 24ms (Views: 20.5ms | ActiveRecord: 0.1ms | Allocations: 6400)
+
+
+Started GET "/alpha_blogs" for ::1 at 2024-03-14 21:07:37 +0500
+Processing by AlphaBlogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/index.html.erb within layouts/application
+  [1m[36mAlphaBlog Load (0.2ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs"[0m
+  ↳ app/views/alpha_blogs/index.html.erb:6
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.2ms | Allocations: 19)
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered alpha_blogs/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 1078)
+  Rendered layout layouts/application.html.erb (Duration: 21.8ms | Allocations: 5624)
+Completed 200 OK in 26ms (Views: 24.1ms | ActiveRecord: 0.2ms | Allocations: 5964)
+
+
+Started GET "/alpha_blogs/3" for ::1 at 2024-03-14 21:07:39 +0500
+Processing by AlphaBlogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAlphaBlog Load (0.1ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:65:in `set_alpha_blog'
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/show.html.erb within layouts/application
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered alpha_blogs/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 515)
+  Rendered layout layouts/application.html.erb (Duration: 19.5ms | Allocations: 5043)
+Completed 200 OK in 25ms (Views: 21.0ms | ActiveRecord: 0.2ms | Allocations: 5883)
+
+
+Started GET "/alpha_blogs/new" for ::1 at 2024-03-14 21:07:39 +0500
+Processing by AlphaBlogsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/new.html.erb within layouts/application
+  Rendered alpha_blogs/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1997)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 2095)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 2548)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1 style="color: red"> New alpha blog</h1>
+
+<%= render "form", alpha_blog: @alpha_blog %>
+
+<br>
+
+<div style="position: relative; left : 5pc; width : 30pc;">
+  <%= link_to "Back to alpha blogs", alpha_blogs_path, ,  class: "btn btn-outline-info" %>
+</div>
+
+):
+1:    <h1 style="color: red"> New alpha blog</h1>
+2:    
+3:    <%= render "form", alpha_blog: @alpha_blog %>
+4:    
+5:    <br>
+6:    
+7:    <div style="position: relative; left : 5pc; width : 30pc;">
+8:      <%= link_to "Back to alpha blogs", alpha_blogs_path, ,  class: "btn btn-outline-info" %>
+9:    </div>
+  
+app/views/alpha_blogs/new.html.erb:8: syntax error, unexpected ','
+Started GET "/alpha_blogs/2" for ::1 at 2024-03-14 21:07:59 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AlphaBlogsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAlphaBlog Load (0.3ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:65:in `set_alpha_blog'
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/show.html.erb within layouts/application
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 1.0ms | Allocations: 288)
+  Rendered alpha_blogs/show.html.erb within layouts/application (Duration: 16.5ms | Allocations: 4155)
+  Rendered layout layouts/application.html.erb (Duration: 139.3ms | Allocations: 53021)
+Completed 200 OK in 380ms (Views: 147.3ms | ActiveRecord: 3.5ms | Allocations: 148890)
+
+
+Started GET "/alpha_blogs" for ::1 at 2024-03-14 21:08:00 +0500
+Processing by AlphaBlogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/index.html.erb within layouts/application
+  [1m[36mAlphaBlog Load (0.2ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs"[0m
+  ↳ app/views/alpha_blogs/index.html.erb:6
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 28)
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered alpha_blogs/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1641)
+  Rendered layout layouts/application.html.erb (Duration: 17.3ms | Allocations: 6309)
+Completed 200 OK in 20ms (Views: 18.1ms | ActiveRecord: 0.2ms | Allocations: 6812)
+
+
+Started GET "/alpha_blogs/new" for ::1 at 2024-03-14 21:08:00 +0500
+Processing by AlphaBlogsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/new.html.erb within layouts/application
+  Rendered alpha_blogs/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 2000)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 2098)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 2563)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1 style="color: red"> New alpha blog</h1>
+
+<%= render "form", alpha_blog: @alpha_blog %>
+
+<br>
+
+<div style="position: relative; left : 5pc; width : 30pc;">
+  <%= link_to "Back to alpha blogs", alpha_blogs_path, ,  class: "btn btn-outline-info" %>
+</div>
+
+):
+1:    <h1 style="color: red"> New alpha blog</h1>
+2:    
+3:    <%= render "form", alpha_blog: @alpha_blog %>
+4:    
+5:    <br>
+6:    
+7:    <div style="position: relative; left : 5pc; width : 30pc;">
+8:      <%= link_to "Back to alpha blogs", alpha_blogs_path, ,  class: "btn btn-outline-info" %>
+9:    </div>
+  
+app/views/alpha_blogs/new.html.erb:8: syntax error, unexpected ','
+Started GET "/alpha_blogs/3" for ::1 at 2024-03-14 21:08:02 +0500
+Processing by AlphaBlogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAlphaBlog Load (0.1ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:65:in `set_alpha_blog'
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/show.html.erb within layouts/application
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 28)
+  Rendered alpha_blogs/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 669)
+  Rendered layout layouts/application.html.erb (Duration: 37.8ms | Allocations: 14063)
+Completed 200 OK in 44ms (Views: 39.6ms | ActiveRecord: 0.1ms | Allocations: 15688)
+
+
+Started GET "/alpha_blogs/3" for ::1 at 2024-03-14 21:09:30 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AlphaBlogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAlphaBlog Load (0.3ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:65:in `set_alpha_blog'
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/show.html.erb within layouts/application
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 1.2ms | Allocations: 288)
+  Rendered alpha_blogs/show.html.erb within layouts/application (Duration: 16.1ms | Allocations: 4178)
+  Rendered layout layouts/application.html.erb (Duration: 140.5ms | Allocations: 52869)
+Completed 200 OK in 366ms (Views: 146.8ms | ActiveRecord: 3.7ms | Allocations: 148734)
+
+
+Started GET "/alpha_blogs" for ::1 at 2024-03-14 21:09:33 +0500
+Processing by AlphaBlogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/index.html.erb within layouts/application
+  [1m[36mAlphaBlog Load (0.3ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs"[0m
+  ↳ app/views/alpha_blogs/index.html.erb:6
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 28)
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered alpha_blogs/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 1635)
+  Rendered layout layouts/application.html.erb (Duration: 19.4ms | Allocations: 6301)
+Completed 200 OK in 22ms (Views: 20.3ms | ActiveRecord: 0.2ms | Allocations: 6815)
+
+
+Started GET "/alpha_blogs" for ::1 at 2024-03-14 21:09:35 +0500
+Processing by AlphaBlogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/index.html.erb within layouts/application
+  [1m[36mAlphaBlog Load (0.2ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs"[0m
+  ↳ app/views/alpha_blogs/index.html.erb:6
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.2ms | Allocations: 19)
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered alpha_blogs/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1099)
+  Rendered layout layouts/application.html.erb (Duration: 19.6ms | Allocations: 5645)
+Completed 200 OK in 23ms (Views: 21.8ms | ActiveRecord: 0.2ms | Allocations: 5985)
+
+
+Started DELETE "/alpha_blogs/3" for ::1 at 2024-03-14 21:09:36 +0500
+Processing by AlphaBlogsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"3"}
+  [1m[36mAlphaBlog Load (0.3ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:65:in `set_alpha_blog'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/alpha_blogs_controller.rb:54:in `destroy'
+  [1m[36mAlphaBlog Destroy (2.0ms)[0m  [1m[31mDELETE FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/alpha_blogs_controller.rb:54:in `destroy'
+  [1m[36mTRANSACTION (47.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/alpha_blogs_controller.rb:54:in `destroy'
+Redirected to http://localhost:3000/alpha_blogs
+Completed 302 Found in 60ms (ActiveRecord: 49.5ms | Allocations: 3289)
+
+
+Started GET "/alpha_blogs" for ::1 at 2024-03-14 21:09:36 +0500
+Processing by AlphaBlogsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/index.html.erb within layouts/application
+  [1m[36mAlphaBlog Load (0.1ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs"[0m
+  ↳ app/views/alpha_blogs/index.html.erb:6
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered alpha_blogs/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1115)
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 5772)
+Completed 200 OK in 18ms (Views: 17.4ms | ActiveRecord: 0.1ms | Allocations: 6200)
+
+
+Started GET "/alpha_blogs/2" for ::1 at 2024-03-14 21:09:36 +0500
+Processing by AlphaBlogsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAlphaBlog Load (0.2ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:65:in `set_alpha_blog'
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/show.html.erb within layouts/application
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered alpha_blogs/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 518)
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 5046)
+Completed 200 OK in 23ms (Views: 18.4ms | ActiveRecord: 0.2ms | Allocations: 5886)
+
+
+Started GET "/alpha_blogs/new" for ::1 at 2024-03-14 21:09:38 +0500
+Processing by AlphaBlogsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/new.html.erb within layouts/application
+  Rendered alpha_blogs/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 2029)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 2127)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 2601)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1 style="color: red"> New alpha blog</h1>
+
+<%= render "form", alpha_blog: @alpha_blog %>
+
+<br>
+
+<div style="position: relative; left : 5pc; width : 30pc;">
+  <%= link_to "Back to alpha blogs", alpha_blogs_path, ,  class: "btn btn-outline-info" %>
+</div>
+
+):
+1:    <h1 style="color: red"> New alpha blog</h1>
+2:    
+3:    <%= render "form", alpha_blog: @alpha_blog %>
+4:    
+5:    <br>
+6:    
+7:    <div style="position: relative; left : 5pc; width : 30pc;">
+8:      <%= link_to "Back to alpha blogs", alpha_blogs_path, ,  class: "btn btn-outline-info" %>
+9:    </div>
+  
+app/views/alpha_blogs/new.html.erb:8: syntax error, unexpected ','
+Started GET "/alpha_blogs/2" for ::1 at 2024-03-14 21:09:40 +0500
+Processing by AlphaBlogsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAlphaBlog Load (0.1ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:65:in `set_alpha_blog'
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/show.html.erb within layouts/application
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.2ms | Allocations: 25)
+  Rendered alpha_blogs/show.html.erb within layouts/application (Duration: 3.1ms | Allocations: 649)
+  Rendered layout layouts/application.html.erb (Duration: 17.3ms | Allocations: 5377)
+Completed 200 OK in 23ms (Views: 18.7ms | ActiveRecord: 0.1ms | Allocations: 6350)
+
+
+Started GET "/alpha_blogs/new" for ::1 at 2024-03-14 21:09:40 +0500
+Processing by AlphaBlogsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/new.html.erb within layouts/application
+  Rendered alpha_blogs/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1157)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 1244)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1590)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1 style="color: red"> New alpha blog</h1>
+
+<%= render "form", alpha_blog: @alpha_blog %>
+
+<br>
+
+<div style="position: relative; left : 5pc; width : 30pc;">
+  <%= link_to "Back to alpha blogs", alpha_blogs_path, ,  class: "btn btn-outline-info" %>
+</div>
+
+):
+1:    <h1 style="color: red"> New alpha blog</h1>
+2:    
+3:    <%= render "form", alpha_blog: @alpha_blog %>
+4:    
+5:    <br>
+6:    
+7:    <div style="position: relative; left : 5pc; width : 30pc;">
+8:      <%= link_to "Back to alpha blogs", alpha_blogs_path, ,  class: "btn btn-outline-info" %>
+9:    </div>
+  
+app/views/alpha_blogs/new.html.erb:8: syntax error, unexpected ','
+Started GET "/alpha_blogs/new" for ::1 at 2024-03-14 21:10:08 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AlphaBlogsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/new.html.erb within layouts/application
+  Rendered alpha_blogs/_form.html.erb (Duration: 17.5ms | Allocations: 5269)
+  Rendered alpha_blogs/new.html.erb within layouts/application (Duration: 19.3ms | Allocations: 5766)
+  Rendered layout layouts/application.html.erb (Duration: 138.0ms | Allocations: 54513)
+Completed 200 OK in 361ms (Views: 145.5ms | ActiveRecord: 3.4ms | Allocations: 145271)
+
+
+Started POST "/alpha_blogs" for ::1 at 2024-03-14 21:12:55 +0500
+Processing by AlphaBlogsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "alpha_blog"=>{"title"=>"Tesla car", "description"=>"Tesla is an electric & luxurious car which is designed by tesla team under the directives of Elon Musk. Very soon FSD (autocar feature) will be added in tesla car"}, "commit"=>"Create Alpha blog"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/alpha_blogs_controller.rb:29:in `block in create'
+  [1m[36mAlphaBlog Create (2.0ms)[0m  [1m[32mINSERT INTO "alpha_blogs" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["title", "Tesla car"], ["description", "Tesla is an electric & luxurious car which is designed by tesla team under the directives of Elon Musk. Very soon FSD (autocar feature) will be added in tesla car"], ["created_at", "2024-03-14 16:12:55.612050"], ["updated_at", "2024-03-14 16:12:55.612050"]]
+  ↳ app/controllers/alpha_blogs_controller.rb:29:in `block in create'
+  [1m[36mTRANSACTION (130.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/alpha_blogs_controller.rb:29:in `block in create'
+Redirected to http://localhost:3000/alpha_blogs/4
+Completed 302 Found in 141ms (ActiveRecord: 132.1ms | Allocations: 4252)
+
+
+Started GET "/alpha_blogs/4" for ::1 at 2024-03-14 21:12:55 +0500
+Processing by AlphaBlogsController#show as TURBO_STREAM
+  Parameters: {"id"=>"4"}
+  [1m[36mAlphaBlog Load (0.2ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:65:in `set_alpha_blog'
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/show.html.erb within layouts/application
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.9ms | Allocations: 256)
+  Rendered alpha_blogs/show.html.erb within layouts/application (Duration: 6.7ms | Allocations: 1612)
+  Rendered layout layouts/application.html.erb (Duration: 17.8ms | Allocations: 6253)
+Completed 200 OK in 32ms (Views: 19.1ms | ActiveRecord: 0.2ms | Allocations: 11821)
+
+
+Started GET "/alpha_blogs/4/edit" for ::1 at 2024-03-14 21:12:58 +0500
+Processing by AlphaBlogsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAlphaBlog Load (0.1ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:65:in `set_alpha_blog'
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/edit.html.erb within layouts/application
+  Rendered alpha_blogs/_form.html.erb (Duration: 3.1ms | Allocations: 998)
+  Rendered alpha_blogs/edit.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1282)
+  Rendered layout layouts/application.html.erb (Duration: 17.4ms | Allocations: 5811)
+Completed 200 OK in 23ms (Views: 18.9ms | ActiveRecord: 0.1ms | Allocations: 6830)
+
+
+Started GET "/alpha_blogs" for ::1 at 2024-03-14 21:12:58 +0500
+Processing by AlphaBlogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/index.html.erb within layouts/application
+  [1m[36mAlphaBlog Load (0.4ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs"[0m
+  ↳ app/views/alpha_blogs/index.html.erb:6
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.2ms | Allocations: 19)
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.2ms | Allocations: 18)
+  Rendered alpha_blogs/index.html.erb within layouts/application (Duration: 7.0ms | Allocations: 1453)
+  Rendered layout layouts/application.html.erb (Duration: 21.6ms | Allocations: 5998)
+Completed 200 OK in 26ms (Views: 23.0ms | ActiveRecord: 0.3ms | Allocations: 6424)
+
+
+Started GET "/alpha_blogs/2" for ::1 at 2024-03-14 21:13:06 +0500
+Processing by AlphaBlogsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAlphaBlog Load (0.3ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:65:in `set_alpha_blog'
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/show.html.erb within layouts/application
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.2ms | Allocations: 19)
+  Rendered alpha_blogs/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 515)
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 5043)
+Completed 200 OK in 21ms (Views: 16.5ms | ActiveRecord: 0.2ms | Allocations: 5885)
+
+
+Started GET "/alpha_blogs/2/edit" for ::1 at 2024-03-14 21:13:07 +0500
+Processing by AlphaBlogsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAlphaBlog Load (0.2ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs" WHERE "alpha_blogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/alpha_blogs_controller.rb:65:in `set_alpha_blog'
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/edit.html.erb within layouts/application
+  Rendered alpha_blogs/_form.html.erb (Duration: 3.7ms | Allocations: 846)
+  Rendered alpha_blogs/edit.html.erb within layouts/application (Duration: 4.4ms | Allocations: 950)
+  Rendered layout layouts/application.html.erb (Duration: 17.9ms | Allocations: 5479)
+Completed 200 OK in 22ms (Views: 19.0ms | ActiveRecord: 0.2ms | Allocations: 6337)
+
+
+Started GET "/alpha_blogs" for ::1 at 2024-03-14 21:13:08 +0500
+Processing by AlphaBlogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/index.html.erb within layouts/application
+  [1m[36mAlphaBlog Load (0.2ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs"[0m
+  ↳ app/views/alpha_blogs/index.html.erb:6
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.3ms | Allocations: 18)
+  Rendered alpha_blogs/index.html.erb within layouts/application (Duration: 6.8ms | Allocations: 1066)
+  Rendered layout layouts/application.html.erb (Duration: 21.5ms | Allocations: 5611)
+Completed 200 OK in 23ms (Views: 22.4ms | ActiveRecord: 0.2ms | Allocations: 5942)
+
+
+Started GET "/alpha_blogs" for ::1 at 2024-03-14 21:14:00 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AlphaBlogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/index.html.erb within layouts/application
+  [1m[36mAlphaBlog Load (0.2ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs"[0m
+  ↳ app/views/alpha_blogs/index.html.erb:6
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.8ms | Allocations: 293)
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered alpha_blogs/index.html.erb within layouts/application (Duration: 196.9ms | Allocations: 79482)
+  Rendered layout layouts/application.html.erb (Duration: 314.2ms | Allocations: 128225)
+Completed 200 OK in 353ms (Views: 313.2ms | ActiveRecord: 7.9ms | Allocations: 146651)
+
+
+Started GET "/alpha_blogs/new" for ::1 at 2024-03-14 21:14:02 +0500
+Processing by AlphaBlogsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/new.html.erb within layouts/application
+  Rendered alpha_blogs/_form.html.erb (Duration: 8.9ms | Allocations: 2791)
+  Rendered alpha_blogs/new.html.erb within layouts/application (Duration: 10.7ms | Allocations: 3148)
+  Rendered layout layouts/application.html.erb (Duration: 23.9ms | Allocations: 7807)
+Completed 200 OK in 28ms (Views: 26.1ms | ActiveRecord: 0.0ms | Allocations: 8342)
+
+
+Started GET "/alpha_blogs" for ::1 at 2024-03-14 21:14:33 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AlphaBlogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/index.html.erb within layouts/application
+  [1m[36mAlphaBlog Load (0.2ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs"[0m
+  ↳ app/views/alpha_blogs/index.html.erb:6
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.8ms | Allocations: 293)
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered alpha_blogs/index.html.erb within layouts/application (Duration: 194.0ms | Allocations: 79484)
+  Rendered layout layouts/application.html.erb (Duration: 308.5ms | Allocations: 128260)
+Completed 200 OK in 347ms (Views: 311.5ms | ActiveRecord: 3.0ms | Allocations: 146684)
+
+
+Started GET "/alpha_blogs" for ::1 at 2024-03-14 21:14:55 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AlphaBlogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering alpha_blogs/index.html.erb within layouts/application
+  [1m[36mAlphaBlog Load (0.2ms)[0m  [1m[34mSELECT "alpha_blogs".* FROM "alpha_blogs"[0m
+  ↳ app/views/alpha_blogs/index.html.erb:6
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.9ms | Allocations: 293)
+  Rendered alpha_blogs/_alpha_blog.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered alpha_blogs/index.html.erb within layouts/application (Duration: 208.7ms | Allocations: 79484)
+  Rendered layout layouts/application.html.erb (Duration: 332.9ms | Allocations: 128192)
+Completed 200 OK in 383ms (Views: 325.1ms | ActiveRecord: 16.0ms | Allocations: 146616)
+
+
