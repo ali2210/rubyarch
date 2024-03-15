@@ -1,0 +1,19 @@
+<p style="color: green"><%= notice %></p>
+
+<h1 style="color : red; position : relative ; left : 5pc"> Users</h1>
+
+<div id="users" style="position : relative; left : 5pc; width : 30pc">
+  <% @users.each do |user| %>
+    <%= render user %>
+    <p>
+      <%= link_to "Show this user", user , class: "btn btn-outline-info" %>
+    </p>
+  <% end %>
+</div>
+
+<div style="position : relative; left : 5pc; width : 30pc">
+    <p style="position : relative; left : 5pc; width : 30pc">
+        Welcome alpha_blog community 
+      <%= link_to "Signup for ALPHABLOG", new_user_path , class: "btn btn-outline-success" %>
+    </p>
+</div>

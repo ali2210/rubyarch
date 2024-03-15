@@ -1,0 +1,12 @@
+<p style="color: green"><%= notice %></p>
+
+<div style="position: relative; left : 5pc; width : 30pc;">
+    <%= render @user ,   class: "btn btn-outline-info" %>
+</div>
+
+<div style="position : relative; left : 5pc; width : 30pc">
+  <%= link_to "Edit this user", edit_user_path(@user),   class: "btn btn-outline-warning" %> |
+  <%= link_to "Back to users", users_path,   class: "btn btn-outline-info" %>
+
+  <%= button_to "Destroy this user", @user, method: :delete ,   class: "btn btn-outline-danger" %>
+</div>
