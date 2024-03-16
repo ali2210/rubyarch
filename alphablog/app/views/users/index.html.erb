@@ -2,18 +2,28 @@
 
 <h1 style="color : red; position : relative ; left : 5pc"> Users</h1>
 
-<div id="users" style="position : relative; left : 5pc; width : 30pc">
+<div id="users" style="position : relative; left : 20pc;top : 5pc; width : 30pc">
   <% @users.each do |user| %>
     <%= render user %>
-    <p>
-      <%= link_to "Show this user", user , class: "btn btn-outline-info" %>
-    </p>
+    <div class="card text-center shadow mb-5 bg-white rounded">
+    <div class="card-header font-italic">
+      <%= link_to user.username, user %>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">
+        <%= link_to user.email, user %>
+      </h5>
+      <p class="card-text"><%= pluralize(user.alpha_blog.count, " My activity !") %></p>
+            <%= link_to "View profile", user, class: "btn btn-outline-success" %>
+            <%= link_to "Edit profile", edit_user_path(user), class: "btn btn-outline-info" %>
+          </div>
+          <div class="card-footer text-muted">
+            <small>Joined <%= time_ago_in_words(user.created_at) %> ago</small>
+          </div>
+      </p>
+    </div>
+    </div>
   <% end %>
 </div>
 
-<div style="position : relative; left : 5pc; width : 30pc">
-    <p style="position : relative; left : 5pc; width : 30pc">
-        Welcome alpha_blog community 
-      <%= link_to "Signup for ALPHABLOG", new_user_path , class: "btn btn-outline-success" %>
-    </p>
-</div>
+

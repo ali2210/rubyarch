@@ -15,5 +15,8 @@ Rails.application.routes.draw do
   get "about" , to: 'pages#about'
 
   resources :alpha_blogs, only: [:show, :index, :new, :create, :edit, :update, :delete]
-  resources :users, only: [:show, :index, :new, :create, :edit, :update, :delete]
+  resources :users, only: [:show, :index, :edit, :update, :delete]
+
+  get 'signup', to: 'users#new'
+  resources :users, except: [:new]
 end

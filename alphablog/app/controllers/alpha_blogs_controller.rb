@@ -24,7 +24,7 @@ class AlphaBlogsController < ApplicationController
   # POST /alpha_blogs or /alpha_blogs.json
   def create
     @alpha_blog = AlphaBlog.new(alpha_blog_params)
-
+    @alpha_blog.user = User.first
     respond_to do |format|
       if @alpha_blog.save
         format.html { redirect_to alpha_blog_url(@alpha_blog), notice: "Alpha blog was successfully created." }
@@ -67,6 +67,6 @@ class AlphaBlogsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def alpha_blog_params
-      params.require(:alpha_blog).permit(:title, :description)
+      params.require(:alpha_blog).permit(:title, :description, :user_id)
     end
 end

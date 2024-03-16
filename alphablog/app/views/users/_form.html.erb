@@ -1,3 +1,5 @@
+
+
 <%= form_with(model: user) do |form| %>
   <% if user.errors.any? %>
     <div style="color: red">
@@ -11,7 +13,17 @@
     </div>
   <% end %>
 
+  <div style="position: relative; left : 5pc; width : 30pc;">
+    <%= form.label :username, style: "display: block" %>
+    <%= form.text_field :username %>
+  </div>
+
+  <div style="position: relative; left : 5pc; width : 30pc;">
+    <%= form.label :email, style: "display: block" %>
+    <%= form.text_area :email %>
+  </div>
+
   <div style="position : relative; left : 5pc; width : 30pc;">
-      <%= form.submit %>
+      <%= form.submit(@user.new_record? ? "Sign up" : "Update account", class: "btn btn-outline-success btn-lg") %>
   </div>
 <% end %>

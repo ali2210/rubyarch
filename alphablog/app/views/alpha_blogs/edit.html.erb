@@ -1,10 +1,3 @@
-<h1 style="color : red; position: relative; left : 5pc;"> Editing alpha blog</h1>
+<h1 class="text-center mt-4">Edit your profile</h1>
+<%= render 'form' %>
 
-<%= render "form", alpha_blog: @alpha_blog %>
-
-<br>
-
-<div style="position: relative; left : 10pc; width : 30pc">
-  <%= link_to "Show this alpha blog", @alpha_blog %> |
-  <%= link_to "Back to alpha blogs", alpha_blogs_path %>
-</div>
