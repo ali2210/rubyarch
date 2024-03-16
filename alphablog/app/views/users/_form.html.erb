@@ -1,0 +1,29 @@
+
+
+<%= form_with(model: user) do |form| %>
+  <% if user.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+        <% user.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div style="position: relative; left : 5pc; width : 30pc;">
+    <%= form.label :username, style: "display: block" %>
+    <%= form.text_field :username %>
+  </div>
+
+  <div style="position: relative; left : 5pc; width : 30pc;">
+    <%= form.label :email, style: "display: block" %>
+    <%= form.text_area :email %>
+  </div>
+
+  <div style="position : relative; left : 5pc; width : 30pc;">
+      <%= form.submit(@user.new_record? ? "Sign up" : "Update account", class: "btn btn-outline-success btn-lg") %>
+  </div>
+<% end %>

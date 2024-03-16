@@ -2,16 +2,17 @@
 
 <h1 style="color: red; position : relative ; left : 2pc"> Alpha blogs</h1>
 
-<div id="alpha_blogs" style="position: relative; left :  10pc; width : 30pc;">
+
+<div id="alpha_blogs" style="position: relative; left :  10pc; width : 30pc; heiht : 10pc;">
   <% @alpha_blogs.each do |alpha_blog| %>
     <%= render alpha_blog %>
-    <p>
+    <p style="position: relative; left :  20pc; width : 30pc;">
       <%= link_to "Show this alpha blog", alpha_blog ,  class: "btn btn-outline-info" %>
     </p>
   <% end %>
 </div>
 
-<div style="position : relative ; left : 30pc; color : red">
+<div style="position : relative ; left : 45pc;">
     <p>
         <%= link_to "New alpha blog", new_alpha_blog_path ,  class: "btn btn-outline-success" %>
     </p>

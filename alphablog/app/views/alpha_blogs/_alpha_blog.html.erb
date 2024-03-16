@@ -1,12 +1,12 @@
-<div id="<%= dom_id alpha_blog %>" style="position: relative; left : 5pc; width : 30pc;">
-  <p>
-    <strong>Title:</strong>
-    <%= alpha_blog.title %>
-  </p>
-
-  <p>
-    <strong>Description:</strong>
-    <%= alpha_blog.description %>
-  </p>
-
+<div id="<%= dom_id alpha_blog %>" style="position: relative; left : 10pc; width : 30pc; height : 10pc;">
+    <div class="card text-center shadow mb-5 bg-white rounded">
+      <div class="card-header font-italic">
+        <% if alpha_blog.user %>
+            by <%= link_to alpha_blog.user.username, user_path(alpha_blog.user) %>
+        <% end %>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title"><%= link_to alpha_blog.title, alpha_blogs_path(alpha_blog), class: "text-success" %></h5>
+      </div>
+    </div>
 </div>
