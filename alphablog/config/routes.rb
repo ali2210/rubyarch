@@ -12,11 +12,29 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
 
+
+
+  # about route
   get "about" , to: 'pages#about'
 
+  # resouces for alpha_blogs
   resources :alpha_blogs, only: [:show, :index, :new, :create, :edit, :update, :delete]
+  
+  # resources allocate for users
   resources :users, only: [:show, :index, :edit, :update, :delete]
 
+
+  # signup get route
   get 'signup', to: 'users#new'
+
+  # resources allocation when user signup
   resources :users, except: [:new]
+
+
+  # user login session request types [get, post & delete]
+  get 'login', to: 'sessions#new'
+  post 'login', to: 'sessions#create'
+  delete 'logout', to: 'sessions#destroy'
+
+
 end

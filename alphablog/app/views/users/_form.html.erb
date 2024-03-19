@@ -23,6 +23,11 @@
     <%= form.text_area :email %>
   </div>
 
+  <div style="position: relative; left : 5pc; width : 30pc;">
+      <%= form.label :password, style: "display: block" %>
+      <%= form.password_field :password %>
+    </div>
+
   <div style="position : relative; left : 5pc; width : 30pc;">
       <%= form.submit(@user.new_record? ? "Sign up" : "Update account", class: "btn btn-outline-success btn-lg") %>
   </div>

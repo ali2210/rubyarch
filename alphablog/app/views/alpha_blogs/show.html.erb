@@ -9,7 +9,7 @@
     <%= @alpha_blog.description if @alpha_blog.description %>
 </div>
 
-
+<% if logged_in? %>
 <div style="position: relative; left : 20pc; top : 10pc; width : 50pc; height : 5pc;">
   <%= link_to "Edit this alpha blog", edit_alpha_blog_path(@alpha_blog) , class: "btn btn-outline-success" %> |
   <%= link_to "Back to alpha blogs", alpha_blogs_path ,  class: "btn btn-outline-info" %>
@@ -18,3 +18,4 @@
 <div style="position: relative; left : 20pc; top : 10pc; width : 50pc; height : 5pc;">
     <%= button_to "Destroy this alpha blog", @alpha_blog , class: "btn btn-outline-danger", method: :delete, data: {confirm: "Are you sure?"} %>
 </div>
+<% end %>

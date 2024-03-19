@@ -1,12 +1,31 @@
 <p style="color: green"><%= notice %></p>
 
 <div style="position: relative; left : 5pc; width : 30pc;">
-    <%= render @user ,   class: "btn btn-outline-info" %>
+    <%= render @user ,  class: "btn btn-outline-info" %>
 </div>
 
-<div style="position : relative; left : 5pc; width : 30pc">
-  <%= link_to "Edit this user", edit_user_path(@user),   class: "btn btn-outline-warning" %> |
-  <%= link_to "Back to users", users_path,   class: "btn btn-outline-info" %>
+<h1 style="color : red; position : relative ; left : 5pc"> Users</h1>
 
-  <%= button_to "Destroy this user", @user, method: :delete ,   class: "btn btn-outline-danger" %>
-</div>
+<div id="users" style="position : relative; left : -30pc;top : 5pc; width : 30pc">
+  <div class="card text-center shadow mb-5 bg-white rounded">
+  <div class="card-header font-italic">
+      <%= @user.username if @user %>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">
+      <%= @user.email if @user %>
+    </h5>
+    <p class="card-text"><%= pluralize(@user.alpha_blog.count, " My activity !") %></p>
+          <%= link_to "View profile", @user, class: "btn btn-outline-success" %>
+          <%= link_to "Edit profile", edit_user_path(@user), class: "btn btn-outline-info" %>
+        </div>
+        <div class="card-footer text-muted">
+          <small>Joined <%= time_ago_in_words(@user.created_at) %> ago</small>
+        </div>
+    </p>
+  </div>
+  </div>
+  <div>
+
+
+  <%= link_to "Logout", logout_path, class: "btn btn-outline-success", method: :delete %>

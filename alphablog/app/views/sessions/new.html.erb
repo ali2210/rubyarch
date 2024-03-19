@@ -1,0 +1,22 @@
+<div style="position: relative; top : 5pc;left : 25pc;">
+    <%= form_with(scope: :session, url: login_path, local: true) do |form| %>
+    <div style="position: relative; left : 5pc; width : 30pc;">
+        <%= form.label :username, style: "display: block" %>
+        <%= form.text_field :username %>
+    </div>
+
+    <div style="position: relative; left : 5pc; width : 30pc;">
+            <%= form.label :email, style: "display: block" %>
+            <%= form.text_area :email %>
+    </div>
+
+    <div style="position: relative; left : 5pc; width : 30pc;">
+            <%= form.label :password, style: "display: block" %>
+            <%= form.password_field :password %>
+    </div>
+
+    <div style="position : relative; left : 5pc; width : 30pc; top : 2pc;">
+        <%= form.submit "Login", class: "btn btn-outline-success btn-md" %>
+    </div>
+  <% end %>
+</div>

@@ -12,8 +12,14 @@
   <% end %>
 </div>
 
+<div class="flickr_pagination mb-4">
+  <%= will_paginate @alpha_blog, :container => false %>
+</div>
+
+<% if logged_in? %>
 <div style="position : relative ; left : 45pc;">
     <p>
         <%= link_to "New alpha blog", new_alpha_blog_path ,  class: "btn btn-outline-success" %>
     </p>
 </div>
+<% end %>

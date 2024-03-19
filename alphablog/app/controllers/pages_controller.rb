@@ -1,11 +1,7 @@
 class PagesController < ApplicationController
 
     def home 
-        # home route 
-    end
-    
-    def about 
-        render html: 'Hello World'
+        redirect_to users_url if logged_in?
     end
 
 end
