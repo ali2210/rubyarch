@@ -5,12 +5,12 @@ class UsersController < ApplicationController
 
   # GET /users or /users.json
   def index
-  #  @alpha_blogs = @user.alpha_blogs.paginate(page: params[:page], per_page: 1)
+    @users = User.paginate(page: params[:page], per_page: 1)
   end
 
   # GET /users/1 or /users/1.json
   def show
-    @users = User.paginate(page: params[:page], per_page: 5)
+    @users = User.paginate(page: params[:page], per_page: 1)
   end
 
   # GET /users/new
