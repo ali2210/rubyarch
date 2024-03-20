@@ -63,8 +63,8 @@ class AlphaBlogsController < ApplicationController
 
 
   def require_same_user
-    if current_user != @alpha_blog.user
-      flash[:alert] = "You can only edit or delete your own article"
+    if current_user != @alpha_blog.user && current_user.admin?
+      flash[:notice] = "You can only edit or delete your own article"
       redirect_to @alpha_blog
     end
   end

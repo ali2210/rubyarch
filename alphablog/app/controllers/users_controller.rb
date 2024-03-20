@@ -1,16 +1,16 @@
 class UsersController < ApplicationController
   before_action :set_user, only: %i[ show edit update destroy ]
-  before_action :require_user, only: [:edit, :update, :show]
-  before_action :require_same_user, only: [:edit, :update, :show]
+  before_action :require_user, only: %i[ show index ]
+  before_action :require_same_user, only: %i[ edit update destroy ]
 
   # GET /users or /users.json
   def index
-    @users = User.paginate(page: params[:page], page: 1)
+  #  @alpha_blogs = @user.alpha_blogs.paginate(page: params[:page], per_page: 1)
   end
 
   # GET /users/1 or /users/1.json
   def show
-    @alpha_blog = @user.alpha_blog.paginate(page: params[:page], page: 1)
+    @users = User.paginate(page: params[:page], per_page: 5)
   end
 
   # GET /users/new
@@ -56,23 +56,26 @@ class UsersController < ApplicationController
   def destroy
 
     @user.destroy!
-
+    session[:user_id] = nil if @user == current_user
     respond_to do |format|
       format.html { redirect_to users_url, notice: "User was successfully destroyed." }
       format.json { head :no_content }
     end
   end
 
-  def current_user
-    @current_user ||= User.find(session[:user_id]) if session[:user_id]
-  end
+  # def current_user
+  #   @current_user ||= User.find(session[:user_id]) if session[:user_id]
+  # end
 
-  def logged_in?
-    !!current_user
-  end
+  # def logged_in?
+  #   !!current_user
+  # end
 
   def require_same_user
-      flash[:notice] = @current_user.username
+      if @user != current_user && !current_user.admin? 
+        flash[:notice] = "You can only edit or delete your own information "
+        redirect_to @user
+      end
   end
 
   private
