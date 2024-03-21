@@ -1,12 +1,22 @@
-<div id="<%= dom_id alpha_blog %>" style="position: relative; left : 10pc; width : 30pc; height : 10pc;">
+<div id="<%= dom_id alpha_blog %>" style="position: relative; top: 2pc; left : 10pc; width : 50pc; height : 25pc;">
     <div class="card text-center shadow mb-5 bg-white rounded">
       <div class="card-header font-italic">
-        <% if alpha_blog.user %>
+        <% if alpha_blog.user  %>
             by <%= link_to alpha_blog.user.username, user_path(alpha_blog.user) %>
         <% end %>
+        <div style="position : relative; top : 2pc;">
+          <% if alpha_blog.categories.any? %>
+              <%= render alpha_blog.categories[0] %>
+          <% end %>
+        </div>
       </div>
       <div class="card-body">
-        <h5 class="card-title"><%= link_to alpha_blog.title, alpha_blogs_path(alpha_blog), class: "text-success" %></h5>
+        <h5 class="card-title"><%= truncate(alpha_blog.description, length: 50) %></h5>
+        <%= link_to "View", alpha_blog_url(alpha_blog), class: "btn btn-outline-success" %>
+        <% if logged_in? && (alpha_blog.user == current_user || current_user.admin?) %>
+              <%= link_to "Edit", edit_alpha_blog_path(alpha_blog), class: "btn btn-outline-info" %>
+              <%= button_to "Delete", alpha_blog_path(alpha_blog), class: "btn btn-outline-danger", method: :delete, data: {confirm: "Are you sure?"} %>
+        <% end %>
       </div>
     </div>
 </div>

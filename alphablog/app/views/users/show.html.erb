@@ -1,12 +1,21 @@
 <p style="color: green"><%= notice %></p>
 
-<div style="position: relative; left : 5pc; width : 30pc;">
-    <%= render @user ,   class: "btn btn-outline-info" %>
+<h1 style="color : red; position : relative ; left : 5pc"> Users</h1>
+
+<div style="position : relative; left : 15pc; width : 30pc;">
+    <%= render @user %>
+    <div style="position : relative; top : 2pc; left : 10pc;">
+        <% if logged_in? && @user == current_user %>
+            <%= link_to "Edit profile", edit_user_path(@user), class: "btn btn-outline-info" %>
+        <% end %>
+
+        <% if logged_in? %>
+            <%= link_to "Logout", logout_path, class: "btn btn-outline-success", method: :delete %>
+        <% end %>
+    </div>
 </div>
 
-<div style="position : relative; left : 5pc; width : 30pc">
-  <%= link_to "Edit this user", edit_user_path(@user),   class: "btn btn-outline-warning" %> |
-  <%= link_to "Back to users", users_path,   class: "btn btn-outline-info" %>
 
-  <%= button_to "Destroy this user", @user, method: :delete ,   class: "btn btn-outline-danger" %>
-</div>
+
+
+

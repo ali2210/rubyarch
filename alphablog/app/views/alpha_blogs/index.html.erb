@@ -3,17 +3,23 @@
 <h1 style="color: red; position : relative ; left : 2pc"> Alpha blogs</h1>
 
 
-<div id="alpha_blogs" style="position: relative; left :  10pc; width : 30pc; heiht : 10pc;">
+<div id="alpha_blogs" style="position: relative; left :  10pc; width : 50pc;">
   <% @alpha_blogs.each do |alpha_blog| %>
     <%= render alpha_blog %>
-    <p style="position: relative; left :  20pc; width : 30pc;">
-      <%= link_to "Show this alpha blog", alpha_blog ,  class: "btn btn-outline-info" %>
+    <p style="position:relative; left : 27.5pc; top : -10pc; left : 50pc;">
+      <%= link_to "Blog", alpha_blog ,  class: "btn btn-outline-info" %>
     </p>
   <% end %>
 </div>
 
-<div style="position : relative ; left : 45pc;">
+<div class="flickr_pagination mb-4">
+  <%= will_paginate @alpha_blogs, :container => false %>
+</div>
+
+<% if logged_in? %>
+<div style="position : relative ; top : 20pc; left : 45pc;">
     <p>
         <%= link_to "New alpha blog", new_alpha_blog_path ,  class: "btn btn-outline-success" %>
     </p>
 </div>
+<% end %>

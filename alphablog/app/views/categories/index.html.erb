@@ -1,0 +1,19 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Categories</h1>
+
+<div id="categories" style="position : relative; left : 20pc; top : 10pc; width : 50pc;">
+  <% @categories.each do |category| %>
+    <%= render category %>
+  <% end %>
+</div>
+
+
+<p class="card-text" style="position : relative; left : 20pc; top : 13pc; "><%= pluralize(@category, "alpha_blog") %></p>
+<div style="position : relative; left : 20pc; top : 8pc; ">
+  <%= link_to "New category", new_category_path %>
+
+  <p style="position : relative; left : 20pc; top : 5pc;">
+      <%= link_to "Show this category", category %>
+  </p>
+</div>

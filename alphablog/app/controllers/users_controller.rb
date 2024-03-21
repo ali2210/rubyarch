@@ -1,15 +1,16 @@
 class UsersController < ApplicationController
   before_action :set_user, only: %i[ show edit update destroy ]
+  before_action :require_user, only: %i[ show index ]
+  before_action :require_same_user, only: %i[ edit update destroy ]
 
   # GET /users or /users.json
   def index
-    @users = User.all
+    @users = User.paginate(page: params[:page], per_page: 1)
   end
 
   # GET /users/1 or /users/1.json
   def show
-    @users = User.find(params[:id])
-    @alpha_blog = @user.alpha_blog
+    @users = User.paginate(page: params[:page], per_page: 1)
   end
 
   # GET /users/new
@@ -23,18 +24,20 @@ class UsersController < ApplicationController
 
   # POST /users or /users.json
   def create
-    @user = User.new(user_params)
+      
+       @user = User.new(user_params)
 
-    respond_to do |format|
-      if @user.save
+       respond_to do |format|
+       if @user.save
+        session[:user_id] = @user.id
         format.html { redirect_to user_url(@user), notice: "User was successfully created." }
         format.json { render :show, status: :created, location: @user }
-      else
+       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @user.errors, status: :unprocessable_entity }
-      end
+       end
     end
-  end
+    end
 
   # PATCH/PUT /users/1 or /users/1.json
   def update
@@ -51,12 +54,28 @@ class UsersController < ApplicationController
 
   # DELETE /users/1 or /users/1.json
   def destroy
-    @user.destroy!
 
+    @user.destroy!
+    session[:user_id] = nil if @user == current_user
     respond_to do |format|
       format.html { redirect_to users_url, notice: "User was successfully destroyed." }
       format.json { head :no_content }
     end
+  end
+
+  # def current_user
+  #   @current_user ||= User.find(session[:user_id]) if session[:user_id]
+  # end
+
+  # def logged_in?
+  #   !!current_user
+  # end
+
+  def require_same_user
+      if @user != current_user && !current_user.admin? 
+        flash[:notice] = "You can only edit or delete your own information "
+        redirect_to @user
+      end
   end
 
   private
@@ -67,6 +86,6 @@ class UsersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def user_params
-      params.fetch(:user).permit(:username, :email)
+      params.fetch(:user).permit(:username, :email, :password)
     end
 end

@@ -1,14 +1,16 @@
 class AlphaBlogsController < ApplicationController
   before_action :set_alpha_blog, only: %i[ show edit update destroy ]
+  before_action :require_user, except: %i[ show index]
+  before_action :require_same_user, only: %i[ edit update destroy]
 
   # GET /alpha_blogs or /alpha_blogs.json
   def index
-    @alpha_blogs = AlphaBlog.all
+    @alpha_blogs = AlphaBlog.paginate(page: params[:page], page: 1)
   end
 
   # GET /alpha_blogs/1 or /alpha_blogs/1.json
   def show
-    
+
   end
 
   # GET /alpha_blogs/new
@@ -24,7 +26,7 @@ class AlphaBlogsController < ApplicationController
   # POST /alpha_blogs or /alpha_blogs.json
   def create
     @alpha_blog = AlphaBlog.new(alpha_blog_params)
-    @alpha_blog.user = User.first
+    @alpha_blog.user = current_user
     respond_to do |format|
       if @alpha_blog.save
         format.html { redirect_to alpha_blog_url(@alpha_blog), notice: "Alpha blog was successfully created." }
@@ -59,6 +61,15 @@ class AlphaBlogsController < ApplicationController
     end
   end
 
+
+  def require_same_user
+    if current_user != @alpha_blog.user && current_user.admin?
+      flash[:notice] = "You can only edit or delete your own article"
+      redirect_to @alpha_blog
+    end
+  end
+  
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_alpha_blog
@@ -67,6 +78,6 @@ class AlphaBlogsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def alpha_blog_params
-      params.require(:alpha_blog).permit(:title, :description, :user_id)
+      params.require(:alpha_blog).permit(:title, :description, :user_id, category_ids: [])
     end
 end

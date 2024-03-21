@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<div style="position : relative; left : 10pc; width : 30pc; top : 4pc;">
+        <%= render @category %>
+        <% if logged_in? && current_user.admin? %>
+        <%= link_to time_ago_in_words(@category.created_at) %>
+        <% end %>
+</div>
+
+<% if logged_in? && current_user.admin? %>
+<div style="position : relative; left : 10pc; width : 30pc; top : 4pc;>
+  <%= link_to "Edit this category", edit_category_path(@category), class: "btn btn-outline-dark btn-md" %> |
+  <%= link_to "Back to categories", categories_path, class: "btn btn-outline-warning btn-md"  %>
+  <%= link_to "Destroy this category", @category, class: "btn btn-outline-danger btn-md" ,  method: :delete %>  
+</div>
+<% end %>
