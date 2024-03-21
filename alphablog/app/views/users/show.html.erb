@@ -2,34 +2,20 @@
 
 <h1 style="color : red; position : relative ; left : 5pc"> Users</h1>
 
-<div style="position : relative; top : 10pc; left : 15pc;">
-  <% if logged_in? && @user == current_user %>
+<div style="position : relative; left : 15pc; width : 30pc;">
+    <%= render @user %>
+    <div style="position : relative; top : 2pc; left : 10pc;">
+        <% if logged_in? && @user == current_user %>
             <%= link_to "Edit profile", edit_user_path(@user), class: "btn btn-outline-info" %>
-    <% end %>
+        <% end %>
 
-    <% if logged_in? %>
+        <% if logged_in? %>
             <%= link_to "Logout", logout_path, class: "btn btn-outline-success", method: :delete %>
-    <% end %>
+        <% end %>
+    </div>
 </div>
 
-<div id="users" style="position : relative; left : -30pc;top : 3pc; width : 30pc">  
-  <%= @users.each do |blogs| %> 
-    <%= render blogs %>
-    <div class="card text-center">
-        <div class="card-header font-italic">
-            <%= blogs.username if blogs.username %>
-        </div>
-        <div class="card-body">
-            <h5 class="card-title">
-                <%= blogs.email if blogs.email %>
-            </h5>
-            <p class="card-text"> <%pluralize(blogs.alpha_blogs.count, " My activity !", "alpha_blog") %></p>
-                <div class="card-footer text-muted">
-                    <small>Joined <%= time_ago_in_words(blogs.created_at) %> ago</small>
-                </div>
-            </p>
-        </div>
-  </div>
-  <% end %>
-  </div>
+
+
+
 

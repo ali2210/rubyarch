@@ -78,6 +78,6 @@ class AlphaBlogsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def alpha_blog_params
-      params.require(:alpha_blog).permit(:title, :description, :user_id)
+      params.require(:alpha_blog).permit(:title, :description, :user_id, category_ids: [])
     end
 end

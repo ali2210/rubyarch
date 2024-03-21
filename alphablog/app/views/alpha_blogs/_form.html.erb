@@ -9,6 +9,18 @@
     <%= form.text_area :description %>
   </div>
 
+  <div style="position: relative; left : 5pc; width : 30pc;>
+    <%= form.label :category, style: "display: block" %>
+    <%= form.collection_select(:category_ids, Category.all, :id, :category,
+            { prompt: "Make your selection from the list below (can be empty)"}, { multiple: true, size: 3, style: "display: block"}) %>           
+  </div>
+
+  <div style="position: relative; left : 5pc; width : 30pc;>
+    <%= form.label :subcategory, style: "display: block" %>
+    <%= form.collection_select(:category_ids, Category.all, :id, :subcategory,
+            { prompt: "Make your selection from the list below (can be empty)"}, { multiple: true, size: 3, style: "display: block"}) %>           
+  </div>
+
   <div style="position: relative; left : 5pc;">
     <%= form.submit %>
   </div>

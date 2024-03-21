@@ -37,8 +37,12 @@ gem 'sassc-rails'
 # add pagination
 gem 'will_paginate', '~> 3.1.0'
 
-
+# user authenicate
 gem 'bcrypt', '~> 3.1.7'
+
+# run tests
+gem 'rexml', require: false
+
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"

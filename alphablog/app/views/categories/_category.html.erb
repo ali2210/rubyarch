@@ -1,0 +1,14 @@
+<div id="<%= dom_id category %>">
+  <p>
+    <strong>Category:</strong>
+    <%= category.category %>
+  </p>
+
+  <p>
+    <strong>Subcategory:</strong>
+    <%= category.subcategory %>
+  </p>
+
+</div>
+
+<%= link_to category.category, category_path(category), class: "badge badge-pill badge-info mr-1" %>
